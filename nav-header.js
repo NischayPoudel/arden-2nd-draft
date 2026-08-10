@@ -15,6 +15,7 @@
     const menuButton = document.querySelector('.site-header .menu');
     const sideMenu = document.querySelector('.side-menu');
     const closeButtons = document.querySelectorAll('[data-menu-close]');
+    const updateHeaderMaterial = () => document.querySelector('.site-header')?.classList.toggle('is-scrolled', window.scrollY > 24);
     const setMenuOpen = open => {
       document.body.classList.toggle('menu-open', open);
       menuButton?.setAttribute('aria-expanded', String(open));
@@ -28,6 +29,8 @@
     document.addEventListener('keydown', event => {
       if (event.key === 'Escape' && document.body.classList.contains('menu-open')) setMenuOpen(false);
     });
+    window.addEventListener('scroll', updateHeaderMaterial, { passive: true });
+    updateHeaderMaterial();
     document.dispatchEvent(new CustomEvent('arden:header-ready'));
   } catch (error) {
     console.error('Unable to load the shared navigation header.', error);

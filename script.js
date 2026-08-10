@@ -1,9 +1,16 @@
 const loader = document.querySelector('.loader');
-window.addEventListener('load', () => setTimeout(() => loader.classList.add('done'), 450));
+window.addEventListener('load', () => loader?.classList.add('done'));
 
 const cursor = document.querySelector('.cursor');
-window.addEventListener('mousemove', e => { cursor.style.left = `${e.clientX}px`; cursor.style.top = `${e.clientY}px`; });
-document.querySelectorAll('a,button').forEach(el => { el.addEventListener('mouseenter',()=>{cursor.style.width='38px';cursor.style.height='38px'}); el.addEventListener('mouseleave',()=>{cursor.style.width='12px';cursor.style.height='12px'}); });
+if (cursor && matchMedia('(pointer:fine)').matches) {
+  window.addEventListener('pointermove', e => {
+    cursor.animate({ left: `${e.clientX}px`, top: `${e.clientY}px` }, { duration: 90, fill: 'forwards' });
+  }, { passive: true });
+  document.querySelectorAll('a,button').forEach(el => {
+    el.addEventListener('pointerenter',()=>cursor.classList.add('is-interacting'));
+    el.addEventListener('pointerleave',()=>cursor.classList.remove('is-interacting'));
+  });
+}
 
 const observer = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting) entry.target.classList.add('visible'); }), {threshold:.12});
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));

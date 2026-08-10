@@ -94,6 +94,13 @@ body.menu-open{overflow:hidden}.menu-backdrop{position:fixed;inset:0;z-index:109
 @media(max-width:767px){.contact{height:240vh}.contact-frame{width:88vw;min-height:68vh}.contact-window{height:27vh;min-height:170px;border-width:7px;border-bottom:0}.contact-copy{padding:22px 15px 20px}.contact-copy>p{margin-bottom:14px;font-size:9px}.contact-copy h2{font-size:25px;margin-bottom:16px}.contact-copy>span{font-size:11px}.contact-copy>a{margin-top:22px}.contact-progress{left:22px;right:22px}}
 @media(prefers-reduced-motion:reduce){.contact{height:auto}.contact-sticky{position:relative}.contact-portrait,.contact-frame,.contact-copy{transform:none!important;opacity:1!important}}
 
+/* Scroll-linked footer reveal: the foreground page uncovers a stationary footer. */
+body>main{position:relative;z-index:10;min-height:100svh;background:var(--paper);box-shadow:0 22px 48px rgba(0,0,0,.08);transform:translate3d(0,0,0);backface-visibility:hidden;-webkit-backface-visibility:hidden}
+body.home-page>main{background:var(--home-cream,#f8f5f0)}
+body>footer{position:sticky;z-index:1;bottom:0;width:100%;margin:0}
+body>.site-header,body>[data-nav-header] .site-header{z-index:1000}
+@media(prefers-reduced-motion:reduce){body>main{box-shadow:none}}
+
 /* Final appointment-frame position: surrounds the face and keeps the CTA visible. */
 .contact-frame{top:50%;height:min(720px,80vh);min-height:0}
 .contact-window{height:34vh;min-height:0}
@@ -104,3 +111,66 @@ body.menu-open{overflow:hidden}.menu-backdrop{position:fixed;inset:0;z-index:109
 .contact-progress{display:none}
 .story-progress{display:none}
 @media(max-width:767px){.contact-frame{top:50%;height:82vh;min-height:0}.contact-window{height:30vh;min-height:0}.contact-copy{padding:16px 15px}.contact-copy>a{margin-top:12px}}
+
+/* Fluid interaction and accessibility layer */
+:root{font:100%/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-optical-sizing:auto}
+body{font-family:'DM Sans',system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+h1,h2,h3,.display,.page-banner h1,.detail-hero h1{font-optical-sizing:auto;text-wrap:balance}
+p,span{overflow-wrap:break-word}
+a,button,[tabindex]{-webkit-tap-highlight-color:transparent}
+a,button{touch-action:manipulation}
+button,.book-link,.pill,.text-link,.editorial-link,.detail-cta a,.side-menu-book,.contact-copy>a,.contact-options a{transform-origin:center;transition-property:transform,background-color,color,opacity,border-color,box-shadow;transition-duration:180ms;transition-timing-function:cubic-bezier(.2,.8,.2,1)}
+button:active,.book-link:active,.pill:active,.text-link:active,.editorial-link:active,.detail-cta a:active,.side-menu-book:active,.contact-copy>a:active,.contact-options a:active{transform:scale(.97);transition-duration:80ms}
+:focus-visible{outline:2px solid #fff;outline-offset:5px}
+.detail-page :focus-visible,.editorial-page :focus-visible{outline-color:currentColor}
+.cursor{width:12px;height:12px;transition:width .16s ease-out,height .16s ease-out,background-color .16s ease-out}
+.cursor.is-interacting{width:38px;height:38px;background:rgba(255,255,255,.08)}
+
+/* The chrome gains material only after content moves beneath it. */
+.site-header,.detail-page .site-header{background:linear-gradient(180deg,rgba(29,9,39,.42),rgba(29,9,39,0));backdrop-filter:blur(0) saturate(100%);-webkit-backdrop-filter:blur(0) saturate(100%);transition:background .32s ease,backdrop-filter .32s ease,box-shadow .32s ease}
+.site-header.is-scrolled,.detail-page .site-header.is-scrolled{background:rgba(73,18,71,.68);backdrop-filter:blur(20px) saturate(165%);-webkit-backdrop-filter:blur(20px) saturate(165%);box-shadow:0 12px 36px rgba(29,9,39,.13),inset 0 -1px rgba(255,255,255,.13)}
+.side-menu{color:#111;background:#fff;backdrop-filter:none;-webkit-backdrop-filter:none;border-right:1px solid #eee3ef;box-shadow:28px 0 70px rgba(29,9,39,.12);transition:transform .42s cubic-bezier(.22,.8,.2,1),visibility .42s}
+.side-menu .side-menu-logo img{filter:none}
+.side-menu .side-menu-close{color:#111}
+.side-menu .side-menu-head,.side-menu .side-menu-links a{border-color:#eadbec}
+.side-menu .side-menu-links a{color:#111;font-family:'DM Sans',sans-serif;font-size:16px;font-weight:500;letter-spacing:.04em}
+.side-menu .side-menu-links a:hover,.side-menu .side-menu-links a:focus-visible{background:#faf4fb;color:#9b35ae}
+.side-menu .side-menu-book{width:min(280px,calc(100% - 60px));min-height:52px;margin:0 auto 10px;color:#fff;background:#9b35ae;border-color:#9b35ae;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;letter-spacing:.08em}
+.side-menu .side-menu-book:hover,.side-menu .side-menu-book:focus-visible{color:#fff;background:#7f2779;border-color:#7f2779}
+.menu-backdrop{backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px)}
+
+@media(hover:hover) and (pointer:fine){
+  .motion-card:hover img,.service-directory a:hover img,.gallery-directory figure:hover img,.detail-gallery figure:hover img{transform:scale(1.03)}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+  .loader{display:none}
+  .reveal{opacity:1;transform:none}
+  .site-header,.detail-page .site-header{transition:none}
+  .motion-card img,.gallery img,.detail-gallery img,.service-directory img,.gallery-directory img{transform:none!important}
+}
+/* True-centered brand and light sticky navigation */
+.site-header,.detail-page .site-header{position:fixed;color:#fff}
+.site-header .brand,.detail-page .site-header .brand{position:absolute;top:50%;left:50%;margin:0;transform:translate(-50%,-50%);z-index:1}
+.site-header .menu,.site-header .book-link{position:relative;z-index:2}
+.site-header.is-scrolled,.detail-page .site-header.is-scrolled{color:#7f2779;background:rgba(255,255,255,.96);backdrop-filter:blur(18px) saturate(130%);-webkit-backdrop-filter:blur(18px) saturate(130%);box-shadow:0 8px 28px rgba(50,24,47,.1),inset 0 -1px rgba(127,39,121,.12)}
+.site-header.is-scrolled .brand img,.detail-page .site-header.is-scrolled .brand img{filter:none}
+.site-header.is-scrolled .menu i,.detail-page .site-header.is-scrolled .menu i{background:#7f2779}
+.site-header.is-scrolled :focus-visible,.detail-page .site-header.is-scrolled :focus-visible{outline-color:#7f2779}
+
+@media(prefers-reduced-transparency:reduce){
+  .site-header,.site-header.is-scrolled,.detail-page .site-header,.detail-page .site-header.is-scrolled{background:#521468;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .side-menu{background:#7f2779;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .menu-backdrop{background:rgba(20,4,25,.82);backdrop-filter:none;-webkit-backdrop-filter:none}
+}
+@media(prefers-contrast:more){
+  .site-header,.site-header.is-scrolled,.detail-page .site-header,.detail-page .site-header.is-scrolled{background:#3b0b3a;border-bottom:2px solid #fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .side-menu{background:#661c62;border-right:2px solid #fff;backdrop-filter:none;-webkit-backdrop-filter:none}
+  .section-no,.service-kicker,.side-menu-links i{color:#fff;opacity:1}
+}
+
+.whatsapp-float{position:fixed;z-index:1080;right:24px;bottom:24px;width:58px;height:58px;display:grid;place-items:center;color:#fff;background:#25d366;border:1px solid rgba(255,255,255,.7);border-radius:50%;box-shadow:0 12px 32px rgba(19,92,47,.28);transition:transform .2s,box-shadow .2s}
+.whatsapp-float svg{width:29px;height:29px;fill:currentColor}
+.whatsapp-float:hover,.whatsapp-float:focus-visible{transform:translateY(-3px);box-shadow:0 16px 38px rgba(19,92,47,.36)}
+@media(max-width:700px){.whatsapp-float{right:16px;bottom:16px;width:52px;height:52px}.whatsapp-float svg{width:26px;height:26px}}

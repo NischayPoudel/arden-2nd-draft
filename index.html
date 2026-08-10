@@ -1,98 +1,125 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Arden Beauty Point & Academy — personalised beauty, bridal artistry and professional beauty education." />
-  <title>Arden — Beauty in Every Detail</title>
-  <link rel="icon" type="image/png" href="IMAGES/arden_logo_final-removebg-preview.png" />
-  <link rel="apple-touch-icon" href="IMAGES/arden_logo_final-removebg-preview.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Arden The Beauty Point & Academy — personalised beauty, professional expertise, and modern artistry in Kathmandu.">
+  <title>Arden The Beauty Point | Premium Beauty Salon</title>
+  <link rel="icon" type="image/png" href="IMAGES/arden_logo_final-removebg-preview.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;1,400&family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="home.css">
   <script src="nav-header.js" defer></script>
 </head>
-<body>
+<body class="home-page">
   <div class="loader" aria-hidden="true"><img src="IMAGES/arden_logo_final-removebg-preview.png" alt=""></div>
-  <div class="cursor"></div>
+  <div class="cursor" aria-hidden="true"></div>
   <div data-nav-header></div>
 
   <main id="top">
-    <section class="hero">
-      <div class="hero-media"><video autoplay muted loop playsinline poster="IMAGES/anna.jpg"><source src="IMAGES/bridal.mp4" type="video/mp4"></video></div>
-      <div class="hero-shade"></div>
-      <div class="hero-copy">
-        <h1><span>Beauty</span><em>in every</em><span>detail.</span></h1>
+    <section class="home-hero">
+      <img class="home-hero-image" src="IMAGES/landing section.png" alt="Arden signature beauty look">
+      <div class="home-hero-overlay"></div>
+      <div class="home-hero-content">
+        <p class="home-kicker">Arden The Beauty Point &amp; Academy</p>
+        <h1>Beauty,<br><em>Elevated.</em></h1>
+        <p class="home-lead">Where professional expertise, personalised care, and modern artistry come together to create beauty that feels entirely your own.</p>
+        <div class="home-actions"><a class="btn btn-light" href="contact.html">Book Appointment</a><a class="text-action" href="#welcome">Explore Arden</a></div>
+      </div>
+      <a class="scroll-cue" href="#welcome"><span>Scroll to Discover</span><i></i></a>
+    </section>
+
+    <section class="home-intro home-section" id="welcome">
+      <div class="home-intro-copy reveal-home">
+        <p class="home-kicker dark">Welcome to Arden</p>
+        <h2>Where Beauty<br><em>Meets Expertise</em></h2>
+        <p>At Arden The Beauty Point, beauty is never one-size-fits-all. Every experience begins with understanding you — your features, preferences, lifestyle, and beauty goals.</p>
+        <p>From precision haircuts and transformative colour to professional skin care, nails, bridal beauty, and complete grooming, every Arden experience is thoughtfully designed around the individual.</p>
+        <a class="line-link" href="about.html">Discover Our Story</a>
+      </div>
+      <figure class="home-intro-image reveal-home"><img src="IMAGES/anna4.jpg" alt="Personalised Arden beauty experience"><figcaption>Beauty, considered personally.</figcaption></figure>
+    </section>
+
+    <section class="statement-section">
+      <img src="IMAGES/royal.jpg" alt="Arden editorial beauty artistry">
+      <div class="statement-shade"></div>
+      <div class="statement-copy reveal-home"><p>Our Philosophy</p><h2>Your Beauty.<br>Your Style.<br><em>The Arden Way.</em></h2><span>Professional expertise meets personalised beauty to create results that feel naturally yours.</span></div>
+    </section>
+
+    <section class="expertise home-section" id="services">
+      <header class="section-heading reveal-home"><p class="home-kicker dark">Our Expertise</p><h2>Everything Beauty,<br><em>Under One Roof.</em></h2></header>
+      <div class="service-grid">
+        <a class="service-card reveal-home" href="hair-styling.html"><span class="service-card-inner"><span class="service-card-face service-card-front"><img src="IMAGES/hair.jpg" alt="Precision hair styling"><span class="service-number">01</span><span class="service-front-title">Precision Hair</span></span><span class="service-card-face service-card-back"><span class="service-number">01</span><h3>Precision Hair</h3><p>Cuts, styling, treatments, and transformations designed around your hair and individual style.</p><b>Explore Service</b></span></span></a>
+        <a class="service-card reveal-home" href="hair-styling.html"><span class="service-card-inner"><span class="service-card-face service-card-front"><img src="IMAGES/anna3.jpg" alt="Professional hair colour"><span class="service-number">02</span><span class="service-front-title">The Colour Studio</span></span><span class="service-card-face service-card-back"><span class="service-number">02</span><h3>The Colour Studio</h3><p>From subtle colour enhancements to advanced highlights and complete transformations.</p><b>Explore Service</b></span></span></a>
+        <a class="service-card reveal-home" href="services.html"><span class="service-card-inner"><span class="service-card-face service-card-front"><img src="IMAGES/anna2.jpg" alt="Skin and facial care"><span class="service-number">03</span><span class="service-front-title">Skin &amp; Facial Care</span></span><span class="service-card-face service-card-back"><span class="service-number">03</span><h3>Skin &amp; Facial Care</h3><p>Professional treatments thoughtfully selected according to individual skin requirements.</p><b>Explore Service</b></span></span></a>
+        <a class="service-card reveal-home" href="nail-atelier.html"><span class="service-card-inner"><span class="service-card-face service-card-front"><img src="IMAGES/nails.jpg" alt="Arden nail studio"><span class="service-number">04</span><span class="service-front-title">Nail Studio</span></span><span class="service-card-face service-card-back"><span class="service-number">04</span><h3>Nail Studio</h3><p>Professional nail care, extensions, polish, and personalised nail artistry.</p><b>Explore Service</b></span></span></a>
+        <a class="service-card reveal-home" href="services.html"><span class="service-card-inner"><span class="service-card-face service-card-front"><img src="IMAGES/makeup.jpg" alt="Brow and lash treatment"><span class="service-number">05</span><span class="service-front-title">Brow &amp; Lash Atelier</span></span><span class="service-card-face service-card-back"><span class="service-number">05</span><h3>Brow &amp; Lash Atelier</h3><p>Beautifully refined brow and lash treatments designed to enhance your natural features.</p><b>Explore Service</b></span></span></a>
+        <a class="service-card reveal-home" href="bridal-artistry.html"><span class="service-card-inner"><span class="service-card-face service-card-front"><img src="IMAGES/bridal makeup image.jpg" alt="Arden bridal beauty"><span class="service-number">06</span><span class="service-front-title">Bridal Beauty</span></span><span class="service-card-face service-card-back"><span class="service-number">06</span><h3>Bridal Beauty</h3><p>Complete bridal experiences thoughtfully designed for life's most unforgettable moments.</p><b>Explore Service</b></span></span></a>
+      </div>
+      <div class="center-action"><a class="btn btn-dark" href="services.html">Explore All Services</a></div>
+    </section>
+
+    <section class="why-section home-section">
+      <div class="why-heading reveal-home"><p class="home-kicker">Why Arden</p><h2>More Than a Beauty Appointment.</h2></div>
+      <div class="why-list">
+        <article class="reveal-home"><figure><img src="IMAGES/anna4.jpg" alt="Personal Arden beauty consultation"></figure><h3>Personal Consultation</h3><p>Every experience begins by understanding your needs, preferences, and desired result.</p></article>
+        <article class="reveal-home"><figure><img src="IMAGES/makeup.jpg" alt="Professional Arden beauty expertise"></figure><h3>Professional Expertise</h3><p>Our specialists combine professional technique with modern beauty practices.</p></article>
+        <article class="reveal-home"><figure><img src="IMAGES/nails.jpg" alt="Premium Arden beauty care"></figure><h3>Premium Care</h3><p>Every detail of your experience is approached with quality and thoughtful attention.</p></article>
+        <article class="reveal-home"><figure><img src="IMAGES/traditional.jpg" alt="Personalised Arden beauty result"></figure><h3>Personalised Results</h3><p>No two clients are the same, and neither should their beauty experience be.</p></article>
       </div>
     </section>
 
-    <section class="cloud-transition" aria-label="Arden beauty philosophy">
-      <div class="transition-copy"><blockquote>“ Your beauty is celebrated through every<br>precise touch. ”</blockquote><span>ARDEN</span></div>
-      <div class="cloud-ridge" aria-hidden="true"><i></i><i></i><i></i></div>
+    <section class="testimonials home-section">
+      <header class="section-heading reveal-home"><p class="home-kicker dark">Client Stories</p><h2>Loved by <em>Our Clients</em></h2><p class="testimonial-intro">Real experiences from brides, clients, and guests who trusted Arden the Beauty Point for their most important moments.</p><div class="review-summary"><b>4.0 Google Rating · 151+ Reviews</b><span>Arden the Beauty Point · Bakhundol, Lalitpur</span></div></header>
+      <div class="testimonial-carousel reveal-home" aria-roledescription="carousel" aria-label="Client testimonials">
+        <div class="testimonial-stage" aria-live="polite">
+          <article class="testimonial-slide is-active"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“Had a wonderful bridal makeup experience at Arden the Beauty Point. Rajesh Dai and the whole team were highly professional and attentive. They created a flawless, elegant look that enhanced my natural beauty perfectly.”</blockquote><footer><span>Bridal Makeup</span><b>Sayara Pokharel</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“The team was incredibly understanding and caring. Rajan Sir truly understands skin and client care. I really appreciated the warmth, professionalism, and attention I received from the Arden team.”</blockquote><footer><span>Makeup &amp; Hair Experience</span><b>Maitri Tiwary</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“I chose Arden for all three days of my wedding ceremony, and it turned into such a satisfying and memorable experience. I’m so happy I trusted the team for such important moments.”</blockquote><footer><span>Wedding Makeup · Three-Day Celebration</span><b>Aadhya</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“Amazing experience! Great value, excellent customer service, and an incredible makeup artist in Rajesh Dai. Before the wedding, I had a detailed consultation where he assessed my skin and hair and gave me helpful preparation tips.”</blockquote><footer><span>Wedding Package</span><b>Spandan Shrestha</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“Best makeup artist in Nepal from my experience. My reception makeup was flawless despite my sensitive skin. The skin preparation and base were amazing, and my skin felt incredibly soft and smooth even the next day.”</blockquote><footer><span>Reception Makeup</span><b>Pragati Thapa</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“I cannot recommend Arden enough for bridal makeup. I was nervous about my big day, but the team made me feel completely at ease. The service was excellent from start to finish, and they really understood the look I wanted.”</blockquote><footer><span>Bridal Makeup</span><b>Kusum Shrestha</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“Rajesh Dai is one of the best bridal makeup artists and hairstylists in Nepal. I had my makeup and hair done by Arden for both days of my wedding celebrations, and I was extremely happy with the result.”</blockquote><footer><span>Bridal Makeup &amp; Hairstyling</span><b>Paridhi Agrawal</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“Arden’s makeup was absolutely flawless and truly top-notch. I was so impressed by the quality of the work and the professionalism of the team. I would recommend Arden without a second thought.”</blockquote><footer><span>Makeup Experience</span><b>Sumi Baidya</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“I’m so thankful I trusted Arden for my wedding and reception makeover. My husband also had his makeover here. We wanted a subtle, natural look, and Rajesh Sir and the team delivered it perfectly.”</blockquote><footer><span>Wedding &amp; Reception Makeover</span><b>Aasna Bhandari</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“They styled my hair for an event, and I was not disappointed at all. I will definitely visit again. Rajesh is the best!”</blockquote><footer><span>Event Hairstyling</span><b>Manju Dulal</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“Absolutely one of the best services in town. The staff are humble, professional, and welcoming. I first visited Arden for bridal makeup and loved the experience so much that I became a regular client.”</blockquote><footer><span>Bridal Makeup &amp; Regular Beauty Services</span><b>Magic Love</b></footer></article>
+          <article class="testimonial-slide"><div class="testimonial-stars" aria-label="Five stars">★★★★★</div><blockquote>“Overall, an excellent experience. I received special-occasion makeup and hair, a face mask, hair mask, and haircut. The service was attentive, and the team made sure I felt well looked after throughout my visit.”</blockquote><footer><span>Makeup, Hair &amp; Beauty Treatments</span><b>Pristina Alford</b></footer></article>
+        </div>
+        <button class="testimonial-arrow testimonial-prev" type="button" aria-label="Previous testimonial">←</button>
+        <button class="testimonial-arrow testimonial-next" type="button" aria-label="Next testimonial">→</button>
+        <div class="testimonial-dots" aria-label="Choose a testimonial"></div>
+        <a class="testimonial-google-link" href="https://www.google.com/maps/search/?api=1&amp;query=Arden+the+Beauty+Point+Bakhundol+Lalitpur" target="_blank" rel="noopener">Read more client experiences on Google Reviews <span>↗</span></a>
+      </div>
     </section>
 
-    <section class="card-scroll" aria-label="Explore Arden beauty services"><div class="card-sticky">
-      <div class="card-atmosphere" aria-hidden="true"></div>
-      <div class="motion-cards">
-        <a class="motion-card card-bridal" href="bridal-artistry.html" aria-label="Explore bridal artistry"><img src="IMAGES/bridal makeup image.jpg" alt="Arden bridal artistry"><span>Bridal Artistry</span></a>
-        <a class="motion-card card-hair" href="hair-styling.html" aria-label="Explore hair and styling"><img src="IMAGES/hair.jpg" alt="Arden hair styling"><span>Hair &amp; Styling</span></a>
-        <a class="motion-card card-nails" href="nail-atelier.html" aria-label="Explore nail artistry"><img src="IMAGES/nails.jpg" alt="Arden nail artistry"><span>Nail Atelier</span></a>
-        <a class="motion-card card-makeup" href="signature-makeup.html" aria-label="Explore signature makeup"><img src="IMAGES/makeup.jpg" alt="Arden signature makeup"><span>Signature Makeup</span></a>
-        <a class="motion-card card-academy" href="arden-academy.html" aria-label="Explore Arden academy"><img src="IMAGES/self makeup.jpg" alt="Arden makeup academy"><span>Arden Academy</span></a>
-      </div>
-      <div class="card-progress" aria-hidden="true"><i></i></div>
-    </div></section>
+    <section class="social-section home-section">
+      <header class="section-heading reveal-home"><p class="home-kicker dark">Follow Along</p><h2>Inside <em>Arden</em></h2><span>Beauty stories, transformations, and moments from Arden.</span></header>
+      <div class="social-grid reveal-home"><img src="IMAGES/SaveClip.App_719863706_17915423931392530_1290336137102257733_n.jpg" alt="Inside Arden"><img src="IMAGES/traditional.jpg" alt="Arden transformation"><img src="IMAGES/SaveClip.App_669923779_17905549869392530_824920188352361752_n.jpg" alt="Arden beauty story"><img src="IMAGES/vintage.jpg" alt="Arden beauty moment"><img src="IMAGES/makeup.jpg" alt="Arden makeup artistry"><img src="IMAGES/nails.jpg" alt="Arden nail artistry"></div>
+      <div class="center-action"><a class="line-link" href="#"><svg class="instagram-mark" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle class="instagram-dot" cx="17.4" cy="6.7" r="1"></circle></svg>Follow Arden</a></div>
+    </section>
 
-    <section class="manifesto" id="story"><div class="manifesto-sticky">
-      <div class="manifesto-title"><span>THE ART OF</span><strong>UNDERSTATED</strong><em>BEAUTY</em></div>
-      <figure class="story-image story-left"><img src="IMAGES/anna.jpg" alt="Arden editorial beauty"></figure>
-      <figure class="story-image story-right"><img src="IMAGES/royal.jpg" alt="Arden royal bridal artistry"></figure>
-      <div class="story-column story-column-left">
-        <figure class="story-image story-first"><img src="IMAGES/bridal makeup image.jpg" alt="Arden bridal makeup detail"></figure>
-        <figure class="story-image story-next"><img src="IMAGES/swostima.jpg" alt="Arden signature makeup detail"></figure>
-      </div>
-      <div class="story-column story-column-right">
-        <figure class="story-image story-first"><img src="IMAGES/traditional.jpg" alt="Arden traditional bridal look"></figure>
-        <figure class="story-image story-next"><img src="IMAGES/anna3.jpg" alt="Arden editorial makeup look"></figure>
-      </div>
-      <div class="story-progress" aria-hidden="true"><i></i></div>
-    </div></section>
+    <section class="conversation-section">
+      <div class="conversation-image"><img src="IMAGES/couples1.jpg" alt="Begin your Arden transformation"></div>
+      <div class="conversation-copy reveal-home"><p class="home-kicker">Personalised Guidance</p><h2>Every Transformation Begins<br><em>With a Conversation.</em></h2><p>Whether you are considering a subtle refresh or a complete transformation, our experts will help you discover the services best suited to you.</p><a class="btn btn-light" href="contact.html">Book Your Consultation</a></div>
+    </section>
 
-    <section class="treatments" id="services"><div class="treatments-sticky">
-      <div class="treatment-visual"><div class="service-images"><img class="active" src="IMAGES/bridal makeup image.jpg" alt="Bridal artistry"><img src="IMAGES/hair.jpg" alt="Hair styling"><img src="IMAGES/nails.jpg" alt="Nail atelier"><img src="IMAGES/self makeup.jpg" alt="Self makeup"><img src="IMAGES/makeup.jpg" alt="Semi permanent makeup"><img src="IMAGES/traditional.jpg" alt="Signature makeup"></div><div class="image-label">Treatment <span>01</span></div></div>
-      <div class="treatment-content"><p class="section-no">[ 02 — PERSONALISED SERVICES ]</p><div class="number-rail"><span class="active">01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span></div>
-        <div class="service-stage">
-          <article class="service-panel active"><p class="service-kicker">01 · Bridal artistry</p><h3>Made for your<br><em>forever moment.</em></h3><p>Your wedding look, composed with intention. Skin that glows, details that photograph beautifully, and artistry that still feels unmistakably you.</p></article>
-          <article class="service-panel"><p class="service-kicker">02 · Hair & styling</p><h3>Every strand,<br><em>considered.</em></h3><p>From sculptural updos to effortless waves, every strand is shaped around your features, your outfit and the way you want to feel.</p></article>
-          <article class="service-panel"><p class="service-kicker">03 · Nail atelier</p><h3>The smallest<br><em>signature.</em></h3><p>Meticulous colour, immaculate form and a polished finish. Our nail rituals turn the smallest canvas into a signature detail.</p></article>
-          <article class="service-panel"><p class="service-kicker">04 · Self makeup</p><h3>Beauty in<br><em>your own hands.</em></h3><p>Learn to create your own polished look with guidance tailored to your face, routine and confidence level.</p></article>
-          <article class="service-panel"><p class="service-kicker">05 · Semi-permanent</p><h3>Beauty that<br><em>stays with you.</em></h3><p>Beauty that stays with you. Expertly applied semi-permanent makeup enhances your natural features with subtle definition. From microblading to soft lip tinting, every stroke is placed with care for a look that lasts.</p></article>
-          <article class="service-panel"><p class="service-kicker">06 · Signature looks</p><h3>Entirely,<br><em>beautifully you.</em></h3><p>A considered look created entirely around you—from the mood and palette to the final, defining touch.</p></article>
-        </div><div class="treatment-progress"><i></i></div>
-      </div>
-    </div></section>
-
-    <section class="portfolio" id="gallery"><div class="portfolio-head reveal"><p class="section-no">[ 04 — SELECTED WORK ]</p><h2>Made for your <em>moment.</em></h2></div><div class="gallery">
-      <figure class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-face flip-card-front"><img src="IMAGES/royal.jpg" alt="Royal bridal makeup"><figcaption>Editorial <span>01</span></figcaption></div><div class="flip-card-face flip-card-back"><p>01 — Editorial</p><h3>Royal<br><em>reverie.</em></h3><span>A richly considered beauty story balancing sculptural detail, luminous skin and timeless elegance.</span><a href="signature-makeup.html">Explore the artistry →</a></div></div></figure>
-      <figure class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-face flip-card-front"><img src="IMAGES/bridal.jpg" alt="Bridal makeup"><figcaption>Bridal <span>02</span></figcaption></div><div class="flip-card-face flip-card-back"><p>02 — Bridal</p><h3>A forever<br><em>moment.</em></h3><span>Radiant bridal artistry created to feel personal, photograph beautifully and last through every celebration.</span><a href="bridal-artistry.html">Explore bridal artistry →</a></div></div></figure>
-      <figure class="flip-card" tabindex="0"><div class="flip-card-inner"><div class="flip-card-face flip-card-front"><img src="IMAGES/anna2.jpg" alt="Signature makeup"><figcaption>Signature <span>03</span></figcaption></div><div class="flip-card-face flip-card-back"><p>03 — Signature</p><h3>Entirely<br><em>your own.</em></h3><span>A refined signature look built around individual features, personal style and the feeling of the occasion.</span><a href="signature-makeup.html">Explore signature makeup →</a></div></div></figure>
-    </div></section>
-
-    <section class="contact" id="contact"><div class="contact-sticky">
-      <div class="contact-portrait"><img src="IMAGES/anna4.jpg" alt="Arden signature beauty portrait"></div>
-      <div class="contact-shade" aria-hidden="true"></div>
-      <div class="contact-frame">
-        <div class="contact-window" aria-hidden="true"></div>
-        <div class="contact-copy"><p>ARDEN BEAUTY</p><h2>Your moment of glow<br>begins here.</h2><span>Let’s make this about you. A thoughtful beauty experience designed to restore confidence and highlight what is naturally yours.</span><a href="mailto:hello@ardenbeauty.com">FIND US</a></div>
-      </div>
-      <div class="contact-progress" aria-hidden="true"><i></i></div>
-    </div></section>
+    <section class="final-cta">
+      <h2>Your Next Look<br><em>Starts Here.</em></h2><p>Discover personalised beauty, professional expertise and an<br>experience created entirely around you.</p><div class="home-actions"><a class="btn btn-light" href="contact.html">Book Appointment</a><a class="text-action" href="services.html">Explore Services</a></div>
+    </section>
   </main>
 
-  <footer><a class="brand footer-brand" href="#top" aria-label="Arden Beauty Point and Academy home"><img src="IMAGES/arden_logo_final-removebg-preview.png" alt="Arden Beauty Point and Academy"></a><div><p>Beauty in every detail.</p><p>Kathmandu, Nepal</p></div><div><a href="#">Instagram ↗</a><a href="#">Facebook ↗</a></div><small>© 2026 ARDEN. ALL RIGHTS RESERVED.</small></footer>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="script.js"></script>
+  <footer class="site-footer arden-footer">
+    <div class="footer-main">
+      <div class="footer-about"><a class="footer-brand" href="#top"><img src="IMAGES/arden_logo_final-removebg-preview.png" alt="Arden Beauty Point and Academy"></a><p>Beauty, elevated through expertise and personalised care. The Beauty Point &amp; Academy.</p></div>
+      <nav class="footer-nav" aria-label="Footer navigation"><h2>Navigate</h2><a href="#top">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="bridal-artistry.html">Bridal</a><a href="gallery.html">Gallery</a><a href="arden-academy.html">Academy</a><a href="contact.html">Contact</a></nav>
+      <div class="footer-contact"><h2>Contact</h2><a href="tel:+9770000000000"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2Z"/></svg>+977 000 000 0000</a><a href="https://wa.me/977000000000" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4a12 12 0 0 0-10.3 18.2L4 28l6-1.6A12 12 0 1 0 16 4Zm0 21.8a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.5.9 1-3.4-.3-.4A9.8 9.8 0 1 1 16 25.8Zm5.4-7.3c-.3-.1-1.8-.9-2-.9-.3-.1-.5-.1-.7.2l-1 1.2c-.2.2-.4.2-.7.1-1.9-.7-3.5-2-4.6-3.7-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.6l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.1.2 2.4 3.7 5.9 5.2 2.2.9 3.1 1 4.2.8.7-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.2-.3-.5-.4-1.2-.7Z"/></svg>WhatsApp</a><a href="mailto:hello@ardenthebeautypoint.com"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3 7 9 6 9-6"/></svg>hello@ardenthebeautypoint.com</a><p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>Kathmandu, Nepal</p></div>
+      <div class="footer-follow"><h2>Follow</h2><div class="footer-socials"><a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle class="social-dot" cx="17.4" cy="6.7" r="1"/></svg></a><a href="#" aria-label="Facebook"><svg viewBox="0 0 320 512" aria-hidden="true"><path d="M279.1 288l14.2-92.7h-88.9v-60.1c0-25.4 12.4-50.1 52.2-50.1H297V6.3S260.4 0 225.4 0C152.3 0 104.5 44.4 104.5 124.7v70.6H23.2V288h81.3v224h99.9V288h74.7Z"/></svg></a></div><form class="footer-newsletter" action="mailto:hello@ardenthebeautypoint.com" method="post" enctype="text/plain"><label class="sr-only" for="footer-email">Your email</label><input id="footer-email" name="email" type="email" placeholder="Your email" required><button type="submit">Join</button></form></div>
+    </div>
+    <div class="footer-bottom"><small>© 2026 Arden The Beauty Point &amp; Academy. All Rights Reserved.</small><nav aria-label="Legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cancellation Policy</a></nav></div>
+  </footer>
+  <script src="home.js"></script>
 </body>
 </html>
