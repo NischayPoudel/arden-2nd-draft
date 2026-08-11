@@ -99,30 +99,31 @@
 @media(max-width:600px){.why-heading{margin-bottom:58px}.why-list{grid-template-columns:1fr;gap:54px}}
 
 /* Client testimonial carousel */
-.testimonials .section-heading{margin-bottom:46px}
-.testimonials .section-heading h2{white-space:nowrap}
-.testimonial-intro{max-width:650px;margin:26px auto 20px;font-size:14px;line-height:1.75;color:#665b62}
-.review-summary{display:flex;flex-direction:column;gap:5px;font-size:11px;line-height:1.6;letter-spacing:.08em}
+.testimonials{min-height:100svh;display:flex;flex-direction:column;justify-content:center;padding-bottom:clamp(24px,3vw,48px)}
+.testimonials .section-heading{margin-bottom:24px}
+.testimonials .section-heading .home-kicker{margin-bottom:18px;font-size:11px}
+.testimonials .section-heading h2{white-space:nowrap;font-size:clamp(40px,4.2vw,64px)}
+.testimonial-intro,.review-summary span{display:none}
+.review-summary{margin-top:18px;font-size:10px;line-height:1.4;letter-spacing:.08em}
 .review-summary b{color:#9b35ae;text-transform:uppercase}
-.review-summary span{color:#756a72}
 .testimonial-carousel{position:relative;width:min(100%,1240px);margin:auto;padding:0 90px;text-align:center}
-.testimonial-stage{display:grid;min-height:430px;align-items:center;border-top:1px solid var(--home-line);border-bottom:1px solid var(--home-line)}
-.testimonial-slide{grid-area:1/1;padding:52px 40px;visibility:hidden;opacity:0;transform:translateX(22px);pointer-events:none;transition:opacity .55s ease,transform .55s ease,visibility .55s}
+.testimonial-stage{display:grid;min-height:300px;align-items:center;border-top:1px solid var(--home-line);border-bottom:1px solid var(--home-line)}
+.testimonial-slide{grid-area:1/1;padding:30px 40px;visibility:hidden;opacity:0;transform:translateX(22px);pointer-events:none;transition:opacity .55s ease,transform .55s ease,visibility .55s}
 .testimonial-slide.is-active{visibility:visible;opacity:1;transform:none;pointer-events:auto}
-.testimonial-stars{margin-bottom:30px;color:#b548c6;font-size:18px;letter-spacing:.2em}
-.testimonial-slide blockquote{max-width:920px;margin:0 auto 34px;font-family:'Cormorant Garamond',serif;font-size:clamp(27px,3vw,43px);font-style:italic;line-height:1.12;color:#171217}
-.testimonial-slide footer{display:flex;flex-direction:column;gap:9px;background:none;color:var(--home-ink)}
-.testimonial-slide footer span{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:#7a7077}
+.testimonial-stars{margin-bottom:20px;color:#b548c6;font-size:15px;letter-spacing:.2em}
+.testimonial-slide blockquote{max-width:900px;margin:0 auto 22px;font-family:'Cormorant Garamond',serif;font-size:clamp(23px,2.35vw,34px);font-style:italic;line-height:1.15;color:#171217}
+.testimonial-slide footer{display:flex;flex-direction:column;background:none;color:var(--home-ink)}
+.testimonial-slide footer span{display:none}
 .testimonial-slide footer b{font-size:14px;font-weight:500;letter-spacing:.04em}
 .testimonial-arrow{position:absolute;top:46%;z-index:2;width:48px;height:48px;border:1px solid var(--home-line);border-radius:50%;color:var(--home-ink);background:transparent;font-size:21px;cursor:pointer;transition:.25s}
 .testimonial-arrow:hover{color:#fff;background:#9b35ae;border-color:#9b35ae}
 .testimonial-prev{left:10px}.testimonial-next{right:10px}
-.testimonial-dots{display:flex;justify-content:center;gap:9px;margin:30px 0 28px}
+.testimonial-dots{display:flex;justify-content:center;gap:9px;margin:18px 0 0}
 .testimonial-dot{width:7px;height:7px;padding:0;border:0;border-radius:10px;background:#aaa5aa;cursor:pointer;transition:.3s}
 .testimonial-dot.is-active{width:28px;background:#b548c6}
-.testimonial-google-link{display:inline-block;padding-bottom:7px;border-bottom:1px solid currentColor;color:#68236d;font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.testimonial-google-link{display:none}
 .testimonial-google-link span{margin-left:12px}
-@media(max-width:700px){.testimonials .section-heading h2{white-space:normal}.testimonial-carousel{padding:0}.testimonial-stage{min-height:500px}.testimonial-slide{padding:42px 18px 64px}.testimonial-slide blockquote{font-size:29px}.testimonial-arrow{top:auto;bottom:100px;width:42px;height:42px}.testimonial-prev{left:4px}.testimonial-next{right:4px}.testimonial-dots{max-width:190px;margin:24px auto 30px;flex-wrap:wrap}.testimonial-intro{font-size:13px}}
+@media(max-width:700px){.testimonials{min-height:100svh}.testimonials .section-heading h2{white-space:normal}.testimonial-carousel{padding:0}.testimonial-stage{min-height:390px}.testimonial-slide{padding:30px 18px 58px}.testimonial-slide blockquote{font-size:25px}.testimonial-arrow{top:auto;bottom:66px;width:42px;height:42px}.testimonial-prev{left:4px}.testimonial-next{right:4px}.testimonial-dots{max-width:190px;margin:18px auto 0;flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){.testimonial-slide{transition:none}}
 
 /* Compact, centered Follow Along gallery */
@@ -156,7 +157,7 @@
 @media(max-width:700px){.final-cta{min-height:650px;padding:80px 22px;background-position:60% center}.final-cta h2{font-size:clamp(54px,16vw,76px);line-height:.86;margin-bottom:30px}.final-cta>p:not(.home-kicker){font-size:14px;margin-bottom:38px}.final-cta>p br{display:none}.final-cta .home-actions{grid-template-columns:minmax(0,300px);gap:12px}}
 
 /* Slow landing-image zoom after the page has loaded */
-.home-hero{overflow:hidden}.home-hero-image{transform:scale(1);transform-origin:center center;will-change:transform}.home-loaded .home-hero-image{animation:home-hero-zoom 14s cubic-bezier(.16,.6,.3,1) forwards}@keyframes home-hero-zoom{to{transform:scale(1.1)}}
+.home-hero{overflow:hidden}.home-hero-image{transform:scale(1);transform-origin:center center;will-change:transform}.home-loaded .home-hero-image{animation:home-hero-zoom 18s cubic-bezier(.16,.6,.3,1) forwards}@keyframes home-hero-zoom{to{transform:scale(1.1)}}
 @media(prefers-reduced-motion:reduce){.home-loaded .home-hero-image{animation:none}.home-hero-image{will-change:auto}}
 
 .expertise .btn-dark{color:var(--home-ink);background:transparent;border:1px solid var(--home-ink)}
