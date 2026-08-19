@@ -31,7 +31,7 @@ if (cursor) {
 }
 
 const innerReveals = document.querySelectorAll(
-  '.detail-intro > *, .detail-points > div, .detail-gallery figure, .detail-cta > *, .editorial-intro > *, .editorial-split > *, .service-directory > a, .gallery-directory figure, .contact-page-copy > *'
+  '.detail-intro > *, .detail-points > div, .detail-gallery figure, .detail-cta > *, .editorial-intro > *, .editorial-split > *, .service-directory > a, .gallery-directory figure, .contact-page-copy > *, .service-category > *, .services-closing > *, .about-foundation header, .foundation-grid article, .about-experience__content > *, .experience-list article'
 );
 if (matchMedia('(prefers-reduced-motion: reduce)').matches) {
   innerReveals.forEach(element => element.classList.add('inner-visible'));

@@ -1,1 +1,53 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Selected bridal, editorial and signature beauty work by Arden."><title>Gallery — Arden</title><link rel="icon" href="IMAGES/arden_logo_final-removebg-preview.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head><body class="detail-page editorial-page"><div class="loader" aria-hidden="true"><img src="IMAGES/arden_logo_final-removebg-preview.png" alt=""></div><div class="cursor"></div><main><section class="page-banner"><p>Selected work</p><h1>Made for your <em>moment.</em></h1><span>Bridal, editorial and signature artistry by Arden.</span></section><section class="gallery-directory"><figure><img src="IMAGES/royal.jpg" alt="Royal bridal makeup"><figcaption>Editorial <span>01</span></figcaption></figure><figure><img src="IMAGES/bridal.jpg" alt="Bridal makeup"><figcaption>Bridal <span>02</span></figcaption></figure><figure><img src="IMAGES/anna2.jpg" alt="Signature makeup"><figcaption>Signature <span>03</span></figcaption></figure><figure><img src="IMAGES/traditional.jpg" alt="Traditional bridal makeup"><figcaption>Tradition <span>04</span></figcaption></figure><figure><img src="IMAGES/swostima.jpg" alt="Editorial makeup"><figcaption>Portrait <span>05</span></figcaption></figure><figure><img src="IMAGES/anna3.jpg" alt="Beauty portrait"><figcaption>Beauty <span>06</span></figcaption></figure></section><section class="detail-cta"><p>Your moment, considered</p><h2>Let’s create something beautiful.</h2><a href="contact.html">Make an appointment →</a></section></main><footer><a class="brand footer-brand" href="index.html"><img src="IMAGES/arden_logo_final-removebg-preview.png" alt="Arden"></a><div><p>Beauty in every detail.</p><p>Kathmandu, Nepal</p></div><div><a href="services.html">Services →</a><a href="contact.html">Contact →</a></div><small>© 2026 ARDEN. ALL RIGHTS RESERVED.</small></footer><script src="service-page.js"></script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Selected bridal, editorial and signature beauty work by Arden.">
+  <title>Gallery — Arden</title>
+  <link rel="icon" href="IMAGES/arden_logo_final-removebg-preview.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Italiana&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="detail-page editorial-page gallery-page">
+  <div class="loader" aria-hidden="true"><img src="IMAGES/arden_logo_final-removebg-preview.png" alt=""></div>
+  <div class="cursor"></div>
+  <main>
+    <section class="page-banner gallery-banner">
+      <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+        <source src="IMAGES/about.mp4" type="video/mp4">
+      </video>
+      <p>Selected work</p>
+      <h1>Made for your <em>moment.</em></h1>
+      <span>Bridal, editorial and signature artistry by Arden.</span>
+    </section>
+    <section class="gallery-showcase" aria-labelledby="gallery-title">
+      <div class="gallery-showcase__head">
+        <h2 id="gallery-title">The Arden <em>Edit</em></h2>
+        <p>Real artistry. Beautiful transformations.</p>
+      </div>
+      <div class="gallery-tabs" role="tablist" aria-label="Filter gallery">
+        <button class="gallery-tab active" type="button" role="tab" aria-selected="true" data-filter="all">All work <span>12</span></button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-filter="hair">Hair</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-filter="colour">Colour</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-filter="makeup">Makeup</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-filter="bridal">Bridal</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-filter="nails">Nails</button>
+        <button class="gallery-tab" type="button" role="tab" aria-selected="false" data-filter="skin">Skin</button>
+      </div>
+      <div class="arden-edit-grid" id="gallery-panel" role="tabpanel" aria-live="polite"></div>
+    </section>
+    <section class="detail-cta"><p>Your moment, considered</p><h2>Let’s create something beautiful.</h2><a href="contact.html">Make an appointment →</a></section>
+  </main>
+  <footer>
+    <a class="brand footer-brand" href="index.html"><img src="IMAGES/arden_logo_final-removebg-preview.png" alt="Arden"></a>
+    <div><p>Beauty in every detail.</p><p>Kathmandu, Nepal</p></div>
+    <div><a href="services.html">Services →</a><a href="contact.html">Contact →</a></div>
+    <small>© 2026 ARDEN. ALL RIGHTS RESERVED.</small>
+  </footer>
+  <script src="service-page.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
