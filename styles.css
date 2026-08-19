@@ -730,3 +730,207 @@ button:active,.book-link:active,.pill:active,.text-link:active,.editorial-link:a
   .floating-whatsapp svg{width:28px;height:28px}
 }
 @media(prefers-reduced-motion:reduce){.floating-whatsapp{transition:none}}
+
+/* Bridal catalogue — follows the Services page editorial system. */
+.bridal-catalogue-page{--bridal-plum:#7a2d73;--bridal-magenta:#a5329c;--bridal-soft:#c88bc3;--bridal-blush:#f8f2f7;--bridal-paper:#fffdfb;color:#242124;background:var(--bridal-paper)}
+.bridal-catalogue-page main{background:var(--bridal-paper)}
+.bridal-catalogue-hero:after{background:rgba(30,15,27,.48)}
+.detail-page .bridal-catalogue-hero{align-items:center;text-align:center}
+.bridal-catalogue-hero .detail-hero-copy{width:min(780px,100%)}
+.detail-page .bridal-catalogue-hero h1{margin:18px 0 28px;font-size:clamp(76px,10vw,150px);line-height:.8}
+.bridal-catalogue-hero .detail-hero-copy>span{display:block;max-width:650px;margin:0 auto;color:#fff;font-size:14px;line-height:1.75}
+.bridal-catalogue-hero .detail-hero-copy>a{display:inline-block;margin-top:35px;padding:16px 22px;border:1px solid rgba(255,255,255,.8);color:#fff;text-transform:uppercase;font-size:9px;font-weight:600;letter-spacing:.16em;transition:background .25s,color .25s,transform .25s}
+.bridal-catalogue-hero .detail-hero-copy>a:hover{color:#4b2148;background:#fff;transform:translateY(-3px)}
+.bridal-intro{max-width:1280px;margin:auto;padding:clamp(95px,10vw,145px) clamp(35px,7vw,90px);text-align:center}
+.bridal-intro>p,.bridal-group-heading>p,.bridal-consultation>p{margin:0;color:var(--bridal-magenta);text-transform:uppercase;font-size:10px;font-weight:600;letter-spacing:.25em}
+.bridal-intro h2{margin:25px 0 32px;font:400 clamp(52px,7vw,92px)/.91 'Cormorant Garamond',serif}
+.bridal-intro h2 em{color:var(--bridal-plum);font-weight:400}
+.bridal-intro>span{display:block;max-width:760px;margin:auto;color:#6d656b;font-size:14px;line-height:1.8}
+.bridal-package-nav{position:-webkit-sticky;position:sticky;top:96px;z-index:990;width:100%;padding:15px 22px;border-block:1px solid #eadfe8;background:rgba(255,253,251,.98);backdrop-filter:blur(9px);-webkit-backdrop-filter:blur(9px);box-shadow:0 8px 22px rgba(55,25,52,.05)}
+.bridal-package-nav--floating{position:fixed;top:var(--bridal-nav-top,96px);right:0;left:0;z-index:999;display:block;opacity:0;visibility:hidden;transform:translateY(-8px);pointer-events:none;transition:opacity .22s ease,transform .22s ease,visibility .22s}
+.bridal-package-nav--floating.is-visible{opacity:1;visibility:visible;transform:none;pointer-events:auto}
+.bridal-package-nav>div{max-width:900px;margin:auto;display:flex;justify-content:center;gap:9px}
+.bridal-package-nav a{min-width:180px;padding:13px 18px;border:1px solid #dfd3dc;background:var(--bridal-blush);text-align:center;text-transform:uppercase;font-size:9px;font-weight:600;letter-spacing:.12em;transition:background .25s,color .25s,transform .25s}
+.bridal-package-nav a:hover,.bridal-package-nav a.active{color:#fff;background:var(--bridal-plum);transform:translateY(-2px)}
+#bridal-packages{padding-bottom:45px}
+.bridal-group-heading{max-width:1280px;margin:auto;padding:110px 55px 28px;display:flex;align-items:end;justify-content:space-between;border-bottom:1px solid #dfd5dc;scroll-margin-top:170px}
+.bridal-group-heading>span{color:#83777f;font:400 25px 'Cormorant Garamond',serif}
+.bridal-package{max-width:1280px;margin:auto;padding:70px 55px 100px;display:grid;grid-template-columns:minmax(360px,.9fr) minmax(440px,1.1fr);gap:clamp(55px,7vw,100px);align-items:start}
+.bridal-package--reverse{grid-template-columns:minmax(440px,1.1fr) minmax(360px,.9fr);background:var(--bridal-blush)}
+.bridal-package--reverse figure{order:2}
+.bridal-package figure{position:sticky;top:190px;height:auto;aspect-ratio:3875/5482;margin:0;overflow:hidden;background:#eadfe8}
+.bridal-package figure img{object-fit:contain;filter:saturate(.9);transition:transform .85s cubic-bezier(.2,.72,.2,1),filter .7s}
+.bridal-package figure:hover img{transform:scale(1.035);filter:saturate(1)}
+.bridal-package__content>header{position:relative;padding:8px 42px 28px 0;border-bottom:1px solid #dcd1d8}
+.bridal-package__content>header>span{position:absolute;top:5px;right:0;color:var(--bridal-soft);font:400 25px Italiana,serif}
+.bridal-package__content>header p{margin:0 0 14px;color:var(--bridal-magenta);text-transform:uppercase;font-size:9px;font-weight:600;letter-spacing:.2em}
+.bridal-package__content h2{margin:0;font:400 clamp(43px,4.5vw,66px)/.92 'Cormorant Garamond',serif}
+.bridal-package--featured .bridal-package__content h2{color:var(--bridal-plum)}
+.bridal-inclusions{margin:18px 0 0;padding:0;list-style:none}
+.bridal-inclusions li{min-height:53px;padding:13px 7px;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:25px;align-items:center;border-bottom:1px solid #e4dbe1;transition:background .25s,transform .25s,padding .25s}
+.bridal-inclusions li:hover{padding-inline:11px;background:#f5eaf3;transform:translateY(-2px)}
+.bridal-inclusions li span{font-size:12px;line-height:1.45}
+.bridal-inclusions li small{color:var(--bridal-plum);text-transform:uppercase;font-size:8px;font-weight:600;letter-spacing:.14em}
+.bridal-couple-includes{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:24px}
+.bridal-couple-includes>section{min-width:0;padding:20px;border:1px solid #e3d9e0;background:rgba(255,255,255,.55)}
+.bridal-couple-includes h3{margin:0 0 5px;color:var(--bridal-plum);font:400 27px 'Cormorant Garamond',serif}
+.bridal-couple-includes .bridal-inclusions{margin-top:10px}
+.bridal-couple-includes .bridal-inclusions li{grid-template-columns:1fr;gap:4px;min-height:0;padding:10px 2px}
+.bridal-couple-includes .bridal-inclusions li small{display:none}
+.bridal-package__book{display:inline-block;margin-top:28px;padding:14px 18px;color:#fff;background:var(--bridal-plum);text-transform:uppercase;font-size:9px;font-weight:600;letter-spacing:.14em;transition:background .25s,transform .25s}
+.bridal-package__book:hover{background:var(--bridal-magenta);transform:translateY(-3px)}
+.bridal-consultation{padding:clamp(95px,10vw,145px) 24px;text-align:center;border-top:1px solid #e5d9e2;background:#fbf6fa}
+.bridal-consultation h2{margin:26px 0 30px;font:400 clamp(52px,7vw,94px)/.91 'Cormorant Garamond',serif}
+.bridal-consultation h2 em{color:var(--bridal-plum);font-weight:400}
+.bridal-consultation>span{display:block;max-width:680px;margin:auto;color:#6d656b;font-size:14px;line-height:1.8}
+.bridal-consultation>div{margin-top:38px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.bridal-consultation a{min-width:205px;padding:16px 20px;border:1px solid var(--bridal-plum);text-transform:uppercase;font-size:9px;font-weight:600;letter-spacing:.14em;transition:background .25s,color .25s,transform .25s}
+.bridal-primary-cta{color:#fff;background:var(--bridal-plum)}
+.bridal-secondary-cta{color:var(--bridal-plum)}
+.bridal-consultation a:hover{color:#fff;background:var(--bridal-magenta);border-color:var(--bridal-magenta);transform:translateY(-3px)}
+.bridal-reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease var(--bridal-delay),transform .75s ease var(--bridal-delay)}
+.bridal-reveal.bridal-visible{opacity:1;transform:none}
+@media(max-width:900px){
+  .bridal-package,.bridal-package--reverse{padding-inline:35px;grid-template-columns:minmax(280px,.85fr) minmax(360px,1.15fr);gap:40px}
+  .bridal-package--reverse{grid-template-columns:minmax(360px,1.15fr) minmax(280px,.85fr)}
+  .bridal-package figure{height:auto}
+  .bridal-couple-includes{grid-template-columns:1fr}
+}
+@media(max-width:800px){.bridal-package-nav{top:78px}}
+@media(max-width:700px){
+  .detail-page .bridal-catalogue-hero{padding-inline:20px}
+  .bridal-catalogue-hero .detail-hero-copy>span{font-size:13px}
+  .bridal-package-nav{top:78px;padding:11px 14px;overflow:hidden}
+  .bridal-package-nav>div{justify-content:flex-start;overflow-x:auto;scrollbar-width:none}
+  .bridal-package-nav a{flex:0 0 160px;min-width:0}
+  .bridal-intro{padding:80px 20px}
+  .bridal-group-heading{padding:80px 20px 24px;display:block;scroll-margin-top:145px}
+  .bridal-group-heading>span{display:block;margin-top:10px;font-size:21px}
+  .bridal-package,.bridal-package--reverse{padding:40px 20px 78px;grid-template-columns:1fr;gap:34px}
+  .bridal-package--reverse figure{order:initial}
+  .bridal-package figure{position:relative;top:auto;height:auto;aspect-ratio:3875/5482}
+  .bridal-package__content h2{font-size:48px}
+  .bridal-inclusions li{min-height:50px}
+  .bridal-couple-includes{gap:14px}
+  .bridal-couple-includes>section{padding:18px 15px}
+  .bridal-package__book{width:100%;padding-block:16px;text-align:center}
+  .bridal-consultation{padding:85px 20px}
+  .bridal-consultation>div{display:grid}
+}
+@media(prefers-reduced-motion:reduce){.bridal-reveal{opacity:1;transform:none;transition:none}.bridal-package figure img,.bridal-inclusions li,.bridal-package-nav a,.bridal-consultation a{transition:none}}
+
+/* Arden Academy course discovery */
+.academy-courses{
+  min-height:880px;
+  padding:clamp(85px,7vw,125px) clamp(84px,9vw,186px);
+  display:grid;
+  grid-template-columns:minmax(310px,.75fr) minmax(0,1.65fr);
+  gap:clamp(55px,7vw,115px);
+  align-items:center;
+  overflow:hidden;
+  color:#251723;
+  background:#fff;
+}
+.academy-courses__intro{max-width:480px;align-self:center;justify-self:center}
+.academy-courses__intro h2{margin:0;font:400 clamp(58px,5.8vw,96px)/.81 'Cormorant Garamond',Italiana,serif;letter-spacing:-.035em}
+.academy-courses__intro p{max-width:440px;margin:42px 0 0;color:#655b63;font-size:clamp(14px,1vw,17px);line-height:1.65}
+.academy-courses__intro>a{min-height:52px;padding:0 20px;display:inline-flex;align-items:center;gap:34px;border:1px solid rgba(255,255,255,.7);text-transform:uppercase;font-size:9px;font-weight:600;letter-spacing:.12em;transition:background .25s,color .25s,transform .25s}
+.academy-courses__intro>a:hover{color:#7a2d73;background:#fff;transform:translateY(-3px)}
+.academy-course-cards{width:100%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,32px);align-items:center}
+.academy-course-card{position:relative;height:clamp(460px,38vw,550px);max-height:550px;overflow:hidden;color:#fff;background:#2d142b;box-shadow:0 20px 55px rgba(48,9,45,.16);transition:transform .45s ease,box-shadow .45s ease}
+.academy-course-card--raised{height:clamp(525px,44vw,640px);max-height:640px}
+.academy-course-card>img{position:absolute;inset:0;filter:saturate(.84);transition:transform .9s ease,filter .7s ease}
+.academy-course-card:after{content:'';position:absolute;inset:26% 0 0;background:linear-gradient(transparent,rgba(25,8,24,.92))}
+.academy-course-card>div{position:absolute;z-index:1;right:0;bottom:0;left:0;padding:25px}
+.academy-course-card small{display:block;margin-bottom:14px;text-transform:uppercase;font-size:8px;font-weight:600;letter-spacing:.16em}
+.academy-course-card h3{margin:0 0 19px;font:400 clamp(29px,2.5vw,43px)/.92 'Cormorant Garamond',Italiana,serif}
+.academy-course-card p{min-height:58px;margin:0 0 20px;color:#f1e9ef;font-size:11px;line-height:1.5}
+.academy-course-card strong{text-transform:uppercase;font-size:8px;letter-spacing:.11em}
+.academy-course-card strong span{margin-left:8px}
+.academy-course-card small,.academy-course-card h3,.academy-course-card p,.academy-course-card strong,.academy-course-card strong span{color:#fff}
+.academy-course-card:hover{transform:translateY(-6px);box-shadow:0 28px 65px rgba(48,9,45,.25)}
+.academy-course-card--raised:hover{transform:translateY(-6px)}
+.academy-course-card:hover>img{transform:scale(1.045);filter:saturate(1)}
+.academy-courses__intro,.academy-course-card{opacity:0;transform:translateY(30px);transition:opacity .8s ease,transform .8s ease,box-shadow .45s ease}
+.academy-course-card--raised{transform:translateY(30px)}
+.academy-courses.is-visible .academy-courses__intro,.academy-courses.is-visible .academy-course-card{opacity:1;transform:none}
+.academy-courses.is-visible .academy-course-card:nth-child(1){transition-delay:.08s}
+.academy-courses.is-visible .academy-course-card:nth-child(2){transform:none;transition-delay:.16s}
+.academy-courses.is-visible .academy-course-card:nth-child(3){transition-delay:.24s}
+.academy-courses.is-visible .academy-course-card:hover{transform:translateY(-6px)}
+.academy-courses.is-visible .academy-course-card--raised:hover{transform:translateY(-6px)}
+@media(max-width:1050px){
+  .academy-courses{grid-template-columns:1fr;padding-inline:54px}
+  .academy-courses__intro{max-width:780px;text-align:center;margin:auto}
+  .academy-courses__intro p{margin-inline:auto}
+  .academy-course-card{height:550px}
+}
+@media(max-width:700px){
+  .academy-courses{padding:72px 24px 78px;gap:48px}
+  .academy-courses__intro h2{font-size:16.5vw;line-height:.82}
+  .academy-courses__intro p{margin:35px auto 30px;font-size:15px}
+  .academy-courses__intro>a{width:100%;justify-content:center}
+  .academy-course-cards{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:25px 0 35px;scrollbar-width:none}
+  .academy-course-card,.academy-courses.is-visible .academy-course-card:nth-child(2){flex:0 0 80vw;height:540px;transform:none;scroll-snap-align:center}
+  .academy-course-card>div{padding:26px 23px}
+  .academy-course-card h3{font-size:38px}
+}
+@media(prefers-reduced-motion:reduce){.academy-courses__intro,.academy-course-card{opacity:1;transform:none!important;transition:none}}
+
+/* Legal and policy pages */
+.legal-page{background:#fffdfb;color:#282228}
+.legal-page main{background:#fffdfb}
+.legal-hero{min-height:56svh;padding:170px 24px 85px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border-bottom:1px solid #e6dae2;background:#faf5f8}
+.legal-hero>p{margin:0 0 24px;color:#a5329c;text-transform:uppercase;font-size:10px;font-weight:600;letter-spacing:.26em}
+.legal-hero h1{max-width:1050px;margin:0;font:400 clamp(58px,8vw,118px)/.9 'Cormorant Garamond',Italiana,serif;letter-spacing:-.035em}
+.legal-hero h1 em{color:#7a2d73;font-weight:400}
+.legal-hero>span{margin-top:30px;color:#82787f;font-size:11px;letter-spacing:.08em}
+.legal-content{width:min(100% - 40px,920px);margin:0 auto;padding:clamp(75px,9vw,125px) 0 clamp(100px,11vw,155px)}
+.legal-content .legal-lead{margin:0 0 70px;color:#473e45;font:400 clamp(25px,3vw,38px)/1.42 'Cormorant Garamond',serif}
+.legal-content section{padding:35px 0;border-top:1px solid #e4d9e0}
+.legal-content h2{margin:0 0 16px;color:#7a2d73;font:400 clamp(28px,3vw,38px)/1 'Cormorant Garamond',serif}
+.legal-content section p{margin:0;color:#665d64;font-size:14px;line-height:1.85}
+.legal-content section a{color:#7a2d73;border-bottom:1px solid #c88bc3}
+@media(max-width:700px){
+  .legal-hero{min-height:50svh;padding:125px 20px 65px}
+  .legal-content{width:calc(100% - 40px);padding:70px 0 95px}
+  .legal-content .legal-lead{margin-bottom:50px}
+  .legal-content section{padding:28px 0}
+}
+
+/* Refined Services catalogue spacing and density */
+@media(min-width:801px){
+  .services-page .category-nav{padding-inline:clamp(70px,8vw,135px)}
+  .services-page .category-nav>div{
+    max-width:900px;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    gap:7px;
+  }
+  .services-page .category-chip{
+    min-height:42px;
+    padding:8px 12px;
+    font-size:9px;
+  }
+  .services-page .service-category,
+  .services-page .service-category:nth-child(even){
+    max-width:1600px;
+    padding:clamp(65px,5vw,88px) clamp(100px,11.25vw,232px);
+    gap:clamp(45px,5.5vw,85px);
+  }
+  .services-page .service-list{gap:8px;padding-top:15px}
+  .services-page .service-row{
+    min-height:64px;
+    padding:10px 12px;
+    grid-template-columns:1fr;
+    gap:5px;
+    justify-items:center;
+    text-align:center;
+  }
+  .services-page .service-row:hover{padding-left:12px}
+  .services-page .service-row p{margin-inline:auto;text-align:center}
+  .services-page .service-row strong{text-align:center}
+  .services-page .service-parent>h3{text-align:center}
+  .services-page .service-note{padding:16px 18px}
+  .services-page .service-book{margin-top:19px}
+  .services-page .featured .service-row{min-height:105px}
+}

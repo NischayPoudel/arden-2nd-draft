@@ -93,6 +93,14 @@ if (contactPage) {
           <option>Hand &amp; Foot Care</option><option>Brow &amp; Lash</option>
           <option>Threading &amp; Facial Grooming</option><option>Body Grooming</option>
           <option>Arden Special</option><option>Party &amp; Event Glam</option><option>Nail Studio</option>
+          <optgroup label="Bridal Services">
+            <option>Bridal Consultation</option><option>Arden Prestige</option><option>Arden Signature</option>
+            <option>Arden Essence</option><option>Arden Gentleman</option><option>Arden Eternal</option>
+            <option>Arden Forever</option><option>Arden Together</option>
+          </optgroup>
+          <optgroup label="Arden Academy">
+            <option>Self-Makeup Class</option><option>Professional Makeup Education</option><option>Focused Masterclasses</option>
+          </optgroup>
         </select>
       </div>
       <div class="appointment-field">
@@ -142,4 +150,41 @@ const founderNote = document.querySelector('.founder-note');
 const aboutStory = document.querySelector('.about-story');
 if (founderNote && aboutStory) {
   aboutStory.parentNode.insertBefore(founderNote, aboutStory);
+}
+
+const academyIntro = document.querySelector('body:not(.bridal-catalogue-page) .detail-intro');
+if (academyIntro && /Arden Academy/i.test(document.title)) {
+  document.querySelector('.detail-gallery')?.remove();
+  const academyCourses = document.createElement('section');
+  academyCourses.className = 'academy-courses';
+  academyCourses.id = 'academy-courses';
+  academyCourses.innerHTML = `
+    <div class="academy-courses__intro">
+      <h2>Learn<br>the art<br>behind<br>the look</h2>
+      <p>Build confidence in your own routine or develop the practical, professional skills to turn artistry into a career.</p>
+    </div>
+    <div class="academy-course-cards">
+      <a class="academy-course-card" href="contact.html#appointment">
+        <img src="IMAGES/self makeup.jpg" alt="Self-makeup education at Arden">
+        <div><small>Course</small><h3>Self-Makeup<br>Class</h3><p>For clients who want to build confidence with everyday and occasion makeup.</p><strong>Explore Course <span aria-hidden="true">↗</span></strong></div>
+      </a>
+      <a class="academy-course-card academy-course-card--raised" href="contact.html#appointment">
+        <img src="IMAGES/traditional.jpg" alt="Professional makeup education at Arden">
+        <div><small>Course</small><h3>Professional<br>Makeup Education</h3><p>For aspiring artists seeking structured, practical beauty training.</p><strong>Explore Course <span aria-hidden="true">↗</span></strong></div>
+      </a>
+      <a class="academy-course-card" href="contact.html#appointment">
+        <img src="IMAGES/makeup.jpg" alt="Focused makeup masterclass at Arden">
+        <div><small>Course</small><h3>Focused<br>Masterclasses</h3><p>Concentrated demonstrations and guided practice for refining selected techniques.</p><strong>Explore Masterclasses <span aria-hidden="true">↗</span></strong></div>
+      </a>
+    </div>`;
+  academyIntro.insertAdjacentElement('afterend', academyCourses);
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) academyCourses.classList.add('is-visible');
+  else {
+    const academyObserver = new IntersectionObserver(entries => entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      academyCourses.classList.add('is-visible');
+      academyObserver.disconnect();
+    }), { threshold: .12 });
+    academyObserver.observe(academyCourses);
+  }
 }

@@ -26,7 +26,7 @@
       <form class="footer-newsletter" action="mailto:hello@ardenthebeautypoint.com" method="post" enctype="text/plain"><label class="sr-only" for="footer-email">Your email</label><input id="footer-email" name="email" type="email" placeholder="Your email" required><button type="submit">Join</button></form>
     </div>
   </div>
-  <div class="footer-bottom"><small>&copy; 2026 Arden The Beauty Point &amp; Academy. All Rights Reserved.</small><nav aria-label="Legal"><a href="#">Privacy Policy</a><a href="#">Terms &amp; Conditions</a><a href="#">Cancellation Policy</a></nav></div>
+  <div class="footer-bottom"><small>&copy; 2026 Arden The Beauty Point &amp; Academy. All Rights Reserved.</small><nav aria-label="Legal"><a href="privacy-policy.html">Privacy Policy</a><a href="terms-and-conditions.html">Terms &amp; Conditions</a><a href="cancellation-policy.html">Cancellation Policy</a></nav></div>
 </footer>`;
 
   const currentFooter = document.querySelector('body > footer');
