@@ -877,6 +877,34 @@ button:active,.book-link:active,.pill:active,.text-link:active,.editorial-link:a
 }
 @media(prefers-reduced-motion:reduce){.academy-courses__intro,.academy-course-card{opacity:1;transform:none!important;transition:none}}
 
+/* Academy — cinematic philosophy statement */
+.academy-philosophy{position:relative;min-height:clamp(760px,92svh,980px);display:grid;place-items:center;isolation:isolate;overflow:hidden;padding:clamp(110px,10vw,170px) clamp(40px,9vw,150px) clamp(65px,7vw,105px);color:#fff;text-align:center;background:#261226}
+.academy-philosophy__image,.academy-philosophy__shade{position:absolute;inset:0;width:100%;height:100%}.academy-philosophy__image{z-index:-2;object-fit:cover;object-position:center 38%;transform:scale(1.025);transition:transform 10s cubic-bezier(.16,.6,.3,1)}
+.academy-philosophy__shade{z-index:-1;background:linear-gradient(180deg,rgba(28,8,27,.48),rgba(28,8,27,.18) 42%,rgba(28,8,27,.82)),linear-gradient(90deg,rgba(28,8,27,.32),transparent 30%,transparent 70%,rgba(28,8,27,.32))}
+.academy-philosophy__content{width:min(1180px,100%);align-self:end}.academy-philosophy .detail-label{margin:0 0 clamp(28px,3vw,48px);color:#fff;font-size:9px;letter-spacing:.38em}
+.academy-philosophy h2{margin:0 auto;color:#fff;font-size:clamp(68px,9.2vw,148px);line-height:.76;letter-spacing:-.045em;text-shadow:0 8px 32px rgba(20,5,19,.2)}.academy-philosophy h2 em{display:inline-block;margin-left:10vw;color:#f1d9ec}
+.academy-philosophy__lead{max-width:680px;margin:clamp(40px,5vw,68px) auto 0;color:#fff;font-size:clamp(14px,1.1vw,18px);line-height:1.75}
+.academy-philosophy .detail-points{grid-template-columns:repeat(3,1fr);margin-top:clamp(45px,5vw,72px);border-top:1px solid rgba(255,255,255,.38);text-align:left}.academy-philosophy .detail-points div{position:relative;padding:25px clamp(18px,2.3vw,36px) 0;border-right:1px solid rgba(255,255,255,.2)}
+.academy-philosophy .detail-points div:first-child{padding-left:0}.academy-philosophy .detail-points div:last-child{padding-right:0;border-right:0}.academy-philosophy .detail-points span{display:block;margin-bottom:15px;color:#f1d9ec;font-size:8px;font-weight:600;letter-spacing:.22em}
+.academy-philosophy .detail-points strong{margin-bottom:10px;color:#fff;font-size:clamp(28px,2.6vw,42px)}.academy-philosophy .detail-points small{display:block;max-width:270px;color:rgba(255,255,255,.82);font-size:11px;line-height:1.55}.academy-philosophy:hover .academy-philosophy__image{transform:scale(1.055)}
+@media(max-width:800px){.academy-philosophy{min-height:860px;padding:100px 24px 52px;place-items:end center}.academy-philosophy__image{object-position:58% center}.academy-philosophy h2{font-size:17vw;line-height:.8}.academy-philosophy h2 em{margin-left:0}.academy-philosophy__lead{margin-top:35px;font-size:14px}.academy-philosophy .detail-points{grid-template-columns:1fr;margin-top:36px}.academy-philosophy .detail-points div,.academy-philosophy .detail-points div:first-child,.academy-philosophy .detail-points div:last-child{display:grid;grid-template-columns:34px 90px 1fr;align-items:start;gap:10px;padding:16px 0;border-right:0;border-bottom:1px solid rgba(255,255,255,.2)}.academy-philosophy .detail-points span,.academy-philosophy .detail-points strong{margin:0}.academy-philosophy .detail-points strong{font-size:24px}}
+
+/* Legal and policy pages */
+/* Compact Academy statement: navbar + complete feature fit in one viewport */
+.academy-philosophy{height:calc(100svh - 96px);min-height:560px;max-height:760px;grid-template-columns:1fr;justify-items:center;padding:clamp(48px,5.5vh,72px) clamp(40px,9vw,150px) clamp(30px,3.5vh,48px)}
+.academy-philosophy__image{object-position:center 18%}
+.academy-philosophy__content{width:min(1100px,100%);align-self:center;justify-self:center;text-align:center}
+.academy-philosophy .detail-label{margin-bottom:clamp(14px,1.8vh,22px);font-size:8px}
+.academy-philosophy h2{font-size:clamp(52px,6.2vw,98px);line-height:.78}
+.academy-philosophy h2 em{margin-left:0}
+.academy-philosophy__lead{max-width:650px;margin-top:clamp(18px,2.6vh,30px);font-size:clamp(12px,.9vw,15px);line-height:1.55}
+.academy-philosophy .detail-points{width:100%;margin:clamp(20px,3vh,34px) auto 0;text-align:center}
+.academy-philosophy .detail-points div{padding-top:14px}
+.academy-philosophy .detail-points span{margin-bottom:7px;font-size:7px}
+.academy-philosophy .detail-points strong{margin-bottom:4px;font-size:clamp(23px,1.9vw,32px)}
+.academy-philosophy .detail-points small{max-width:230px;margin-inline:auto;font-size:9px;line-height:1.4;text-align:center}
+@media(max-width:800px){.academy-philosophy{height:calc(100svh - 78px);min-height:560px;max-height:none;padding:42px 24px 24px}.academy-philosophy__image{object-position:center 16%}.academy-philosophy h2{font-size:13.5vw}.academy-philosophy h2 em{margin-left:0}.academy-philosophy__lead{margin-top:18px;font-size:11px}.academy-philosophy .detail-points{margin-top:18px}.academy-philosophy .detail-points div,.academy-philosophy .detail-points div:first-child,.academy-philosophy .detail-points div:last-child{grid-template-columns:24px 66px 1fr;justify-content:center;gap:7px;padding:8px 0;text-align:center}.academy-philosophy .detail-points strong{font-size:18px}.academy-philosophy .detail-points small{font-size:8px;text-align:center}}
+
 /* Legal and policy pages */
 .legal-page{background:#fffdfb;color:#282228}
 .legal-page main{background:#fffdfb}
