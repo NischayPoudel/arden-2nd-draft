@@ -11,6 +11,22 @@ C('body-grooming','Body Grooming','Body Grooming Services','vintage.jpg',[['Face
 C('arden-special','Arden Special','Arden Special','royal.jpg',[['Sweaty Scalp Treatment','Rs. 3,500','Anti-Hairfall / Anti-Flakiness / Sweat Control / Itchy & Dry Scalp Treatment / Lice Treatment / Fungal/Dandruff Treatment / Sensitive Scalp & Skin Treatment / Head Spa included'],['Brazilian Blow Out','Rs. 15,000'],['Arden Special Facial','Rs. 8,000','With Skin Test'],['Skin Treatment','Rs. 3,000'],['Hair Cut by Master Hair Stylist','Rs. 3,000','Wash, hair cut and blow dry.']]),
 C('party-event','Party & Event Glam','Party & Event Glam','bridal makeup image.jpg',[['Event Makeup','Rs. 3,500'],['Guest Makeup','Rs. 8,000'],['Party Makeup','Rs. 12,500','By Junior Makeup Artist'],['Full Glam Party Makeup','Rs. 15,000','By Senior Makeup Artist'],['VIP Party Makeup','Rs. 27,000']]),
 C('nail-studio','Nail Studio','Nail Studio','SaveClip.App_719491000_17915424168392530_8442853382264134304_n.jpg',[['Gel Nail Extensions — Plain','Rs. 2,500'],['Gel Polish (Hands)','Rs. 2,000'],['Gel Polish (Feet)','Rs. 1,500'],['Nail Refill','Rs. 2,500'],['Nail Art','Rs. 100 / nail art'],['Extension Removal','Rs. 1,000'],['Normal Nail Paint with Filing','Rs. 500']],{note:'Nail art pricing varies based on the design. Custom designs are charged at an additional Rs. 100 per nail art.'})];
+const serviceImages = {
+  'facial-skin': 'ardenfacial and skin ttreatment.png',
+  'precision-haircuts': 'arden signature haircuts.png',
+  'colour-studio': 'ardenthe color studio.png',
+  'hair-treatments': 'arden hair treatment and styling.png',
+  'hand-foot': 'arden hand and footcare.png',
+  'brow-lash': 'arden brow and lash.png',
+  'threading': 'arden threading and facial grooming.png',
+  'body-grooming': 'arden body grooming services.png',
+  'arden-special': 'arden arden special.png',
+  'party-event': 'arden arden special copy.png',
+  'nail-studio': 'arden nail studio.png'
+};
+
+serviceCategories.forEach(category => { category.image = serviceImages[category.id]; });
+
 const row=(s,child='')=>`<li class="service-row ${child}"><div><h3>${s[0]}</h3>${s[2]?`<p>${s[2]}</p>`:''}</div><strong>${s[1]}</strong></li>`;
 const nav=document.querySelector('#category-navigation'),catalogue=document.querySelector('#services-catalogue');
 nav.innerHTML=`<a href="#all-services" class="category-chip active" data-filter="all" aria-current="true">All</a>${serviceCategories.map(c=>`<a href="#${c.id}" class="category-chip" data-filter="${c.id}">${c.nav}</a>`).join('')}`;

@@ -191,6 +191,12 @@ button:active,.book-link:active,.pill:active,.text-link:active,.editorial-link:a
 .detail-hero,.page-banner{isolation:isolate;background:#261226}
 .detail-hero{padding-bottom:10vh}
 .detail-hero>img{transform:scale(1.01);transition:transform 12s cubic-bezier(.16,.6,.3,1)}
+.landing-photo-page .detail-hero>img,
+.landing-photo-page .contact-page-image img{transform:scale(1);transform-origin:center center;will-change:transform}
+.landing-photo-page .contact-page-image{overflow:hidden}
+.landing-photo-page.landing-photo-loaded .detail-hero>img,
+.landing-photo-page.landing-photo-loaded .contact-page-image img{animation:landingPhotoZoom 18s cubic-bezier(.16,.6,.3,1) forwards}
+@keyframes landingPhotoZoom{to{transform:scale(1.1)}}
 .detail-hero:after{background:linear-gradient(90deg,rgba(29,17,27,.62),rgba(29,17,27,.12) 72%),linear-gradient(0deg,rgba(29,17,27,.68),transparent 62%)}
 .detail-hero-copy p{color:#fff}
 .detail-hero h1{font-family:'Cormorant Garamond',Italiana,serif;font-size:clamp(62px,8vw,124px);line-height:.84;letter-spacing:-.035em}
@@ -242,6 +248,11 @@ button:active,.book-link:active,.pill:active,.text-link:active,.editorial-link:a
 .detail-page>footer>small{border-color:rgba(255,255,255,.14);color:#cdbdca}
 @media(max-width:800px){.detail-hero h1 em,.page-banner h1 em{margin-left:0}.detail-page>footer{grid-template-columns:1fr;gap:34px}.detail-page>footer>small{margin-top:12px}.contact-page-copy{padding-top:85px}.page-banner{min-height:70svh}.detail-intro h2,.editorial-intro h2,.editorial-split h2{font-size:clamp(48px,14vw,72px)}}
 @media(prefers-reduced-motion:reduce){.inner-reveal{opacity:1;transform:none}.detail-hero>img,.contact-page-image img{transition:none}}
+@media(prefers-reduced-motion:reduce){
+  .landing-photo-page.landing-photo-loaded .detail-hero>img,
+  .landing-photo-page.landing-photo-loaded .contact-page-image img{animation:none}
+  .landing-photo-page .detail-hero>img,.landing-photo-page .contact-page-image img{will-change:auto}
+}
 
 /* Shared footer from footer.html — identical on every route. */
 .arden-footer,body.detail-page>.arden-footer{display:block;padding:78px clamp(24px,5vw,82px) 30px;color:#f7edf6;background:#7f2779;border:0}
@@ -262,8 +273,44 @@ button:active,.book-link:active,.pill:active,.text-link:active,.editorial-link:a
 
 /* About — Arden philosophy and experience */
 .about-hero:after{background:linear-gradient(90deg,rgba(26,5,32,.83),rgba(34,7,40,.15) 72%),linear-gradient(0deg,rgba(21,4,26,.7),transparent 58%)}.about-hero>img{object-position:center 22%;filter:saturate(.82)}.about-hero h1 em{margin-left:12vw}.about-story{padding-top:150px;padding-bottom:155px}.about-foundation{padding:125px 7vw 145px;color:#fff;background:#26092f}.about-foundation header{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:78px}.about-foundation .detail-label{color:#d8c0df}.about-foundation h2,.about-experience h2{margin:0;font:400 clamp(55px,7vw,105px)/.9 'Cormorant Garamond',Italiana,serif;letter-spacing:-.02em}.about-foundation h2 em,.about-experience h2 em{font-weight:400;color:#c98fc5}.foundation-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(255,255,255,.25)}.foundation-grid article{min-height:330px;padding:30px clamp(25px,3vw,50px) 35px 0;border-right:1px solid rgba(255,255,255,.18)}.foundation-grid article+article{padding-left:clamp(25px,3vw,50px)}.foundation-grid article:last-child{border-right:0}.foundation-grid span,.experience-list>article>span{color:#c98fc5;font:400 18px Italiana}.foundation-grid h3{margin:85px 0 18px;font:400 clamp(29px,2.7vw,42px)/1.05 'Cormorant Garamond',Italiana,serif}.foundation-grid p{max-width:340px;margin:0;color:#d9cfd9;font-size:13px;line-height:1.75}.about-experience{min-height:1000px;display:grid;grid-template-columns:.9fr 1.1fr;background:#f7f1ed}.about-experience__image{position:relative;min-height:780px;overflow:hidden}.about-experience__image:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(38,9,47,.28),transparent 45%)}.about-experience__image img{filter:saturate(.82);object-position:center top}.about-experience__content{padding:125px clamp(45px,7vw,120px)}.about-experience__content>.detail-label{margin-bottom:35px}.about-experience h2{color:#171217}.about-experience h2 em{display:block}.experience-list{margin-top:70px;border-top:1px solid rgba(36,10,45,.2)}.experience-list article{display:grid;grid-template-columns:55px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid rgba(36,10,45,.16)}.experience-list h3{margin:0 0 7px;font:400 25px 'Cormorant Garamond',Italiana,serif}.experience-list p{margin:0;color:#6c5c6a;font-size:12px;line-height:1.65}.about-book{margin-top:48px;display:inline-flex;align-items:center;gap:50px;padding:17px 25px;border:1px solid #7f2779;border-radius:50px;color:#7f2779;text-transform:uppercase;font-size:9px;font-weight:600;letter-spacing:.18em;transition:.3s}.about-book:hover{color:#fff;background:#7f2779}.about-book span{font-size:17px}
+.about-page .about-hero .detail-hero-copy{transform:translateY(-18vh)}
+.founder-note{
+  padding:clamp(70px,8vw,125px) clamp(34px,7vw,120px);
+  display:grid;
+  grid-template-columns:minmax(320px,.9fr) minmax(430px,1.1fr);
+  gap:clamp(55px,8vw,135px);
+  align-items:center;
+  background:#fffdfb;
+}
+.founder-note__portrait{
+  margin:0;
+  aspect-ratio:641/864;
+  overflow:hidden;
+  background:#eee6e8;
+}
+.founder-note__portrait img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.founder-note__content{max-width:760px}
+.founder-note__content>.detail-label{margin:0 0 28px;color:#a5329c}
+.founder-note__content h2{
+  margin:0 0 38px;
+  color:#211c20;
+  font:400 clamp(48px,5.5vw,82px)/.92 'Cormorant Garamond',Italiana,serif;
+  letter-spacing:-.025em;
+}
+.founder-note__content h2 em{color:#7f2779;font-weight:400}
+.founder-note__letter{max-width:680px;color:#625a60;font-size:15px;line-height:1.85}
+.founder-note__letter p{margin:0 0 20px}
+.founder-note__signature{margin:34px 0 0;padding-top:22px;border-top:1px solid #dfd4dc}
+.founder-note__signature strong{display:block;color:#322b30;font:400 25px 'Cormorant Garamond',serif}
+.founder-note__signature span{display:block;margin-top:4px;color:#8b7f87;font-size:10px;letter-spacing:.13em;text-transform:uppercase}
 
 @media(max-width:800px){.about-hero h1 em{margin-left:0}.about-story{padding-top:90px;padding-bottom:95px}.about-foundation{padding:85px 24px 90px}.about-foundation header{display:block;margin-bottom:48px}.about-foundation h2{margin-top:25px}.foundation-grid{grid-template-columns:1fr}.foundation-grid article,.foundation-grid article+article{min-height:0;padding:28px 0 36px;border-right:0;border-bottom:1px solid rgba(255,255,255,.18)}.foundation-grid h3{margin:38px 0 12px}.about-experience{grid-template-columns:1fr}.about-experience__image{min-height:62vh}.about-experience__content{padding:85px 24px}.experience-list{margin-top:50px}.experience-list article{grid-template-columns:40px 1fr;gap:12px}.about-book{gap:25px}}
+@media(max-width:800px){.about-page .about-hero .detail-hero-copy{transform:translateY(-12vh)}}
+@media(max-width:900px){
+  .founder-note{grid-template-columns:1fr;padding:75px 24px;gap:48px}
+  .founder-note__portrait{width:min(100%,560px);margin-inline:auto}
+  .founder-note__content{max-width:680px;margin-inline:auto}
+}
 
 /* The Arden Edit — calm, filtered portfolio grid */
 .gallery-page .gallery-showcase{padding:clamp(100px,10vw,155px) clamp(20px,3vw,64px) 140px;background:#fbf9f5}.gallery-page .gallery-showcase__head{display:block;max-width:920px;margin:0 auto;text-align:center}.gallery-page .gallery-showcase__head .detail-label{margin:0 0 27px;color:#a738a0;font-size:10px;font-weight:600;letter-spacing:.34em}.gallery-page .gallery-showcase__head h2{margin:0;color:#0e0c0e;font:400 clamp(64px,7.4vw,118px)/.9 'Cormorant Garamond',Italiana,serif;letter-spacing:-.035em}.gallery-page .gallery-showcase__head h2 em{display:inline;margin:0;font-weight:400;color:inherit}.gallery-page .gallery-showcase__head>p:last-child{max-width:none;margin:27px 0 0;color:#322e32;font-size:clamp(15px,1.25vw,20px);line-height:1.5}.gallery-page .gallery-tabs{max-width:max-content;margin:clamp(70px,8vw,110px) auto 70px;display:flex;gap:10px;border:0}.gallery-page .gallery-tab,.gallery-page .gallery-tab:first-child{min-height:50px;padding:0 25px;border:1px solid transparent;color:#191619;background:#f4f0ea;font-size:10px;font-weight:600;letter-spacing:.18em;transition:color .3s,background .3s,transform .3s,box-shadow .3s}.gallery-page .gallery-tab:after{display:none}.gallery-page .gallery-tab:hover{color:#7f2779;background:#eee6ed;transform:translateY(-2px)}.gallery-page .gallery-tab.active{color:#fff;background:#9c3b96;box-shadow:0 10px 28px rgba(127,39,121,.16)}.gallery-page .gallery-tab span{margin-left:7px;color:inherit;opacity:.65}.arden-edit-grid{max-width:1500px;margin:0 auto;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,32px);transition:opacity .24s ease,transform .24s ease}.arden-edit-grid.is-filtering{opacity:0;transform:translateY(12px)}.arden-edit-card{min-width:0;margin:0;opacity:0;animation:ardenCardIn .75s cubic-bezier(.2,.72,.2,1) forwards;animation-delay:var(--card-delay)}.arden-edit-card__media{position:relative;aspect-ratio:1/1;overflow:hidden;background:#e9e2e7}.arden-edit-card--wide .arden-edit-card__media{aspect-ratio:1.08/1}.arden-edit-card--tall .arden-edit-card__media{aspect-ratio:.88/1}.arden-edit-card__media:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,rgba(28,7,34,.35),transparent 42%);opacity:0;transition:opacity .55s ease}.arden-edit-card img{transform:scale(1.012);filter:saturate(.88) contrast(.98);transition:transform 1.15s cubic-bezier(.2,.72,.2,1),filter .75s ease}.arden-edit-card__view{position:absolute;z-index:2;right:22px;bottom:22px;left:22px;display:flex;align-items:center;justify-content:space-between;color:#fff;text-transform:uppercase;font-size:9px;font-weight:600;letter-spacing:.2em;opacity:0;transform:translateY(12px);transition:opacity .45s ease,transform .45s ease}.arden-edit-card__view i{font-size:18px;font-style:normal;font-weight:400}.arden-edit-card:hover img{transform:scale(1.055);filter:saturate(1) contrast(1)}.arden-edit-card:hover .arden-edit-card__media:after,.arden-edit-card:hover .arden-edit-card__view{opacity:1}.arden-edit-card:hover .arden-edit-card__view{transform:none}.arden-edit-card figcaption{padding:18px 2px 5px;display:flex;align-items:baseline;justify-content:space-between;gap:15px}.arden-edit-card figcaption>span{font:400 clamp(20px,1.7vw,28px) 'Cormorant Garamond',Italiana,serif}.arden-edit-card figcaption small{color:#8b7b89;text-transform:uppercase;font-size:8px;font-weight:600;letter-spacing:.22em}@keyframes ardenCardIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
@@ -445,3 +492,241 @@ button:active,.book-link:active,.pill:active,.text-link:active,.editorial-link:a
   .detail-page .contact-page-copy{width:calc(100% - 40px);padding:110px 0 55px}
   .detail-page .contact-options{margin-top:28px}
 }
+
+/* Compact service menus: keep the full offering visible without a long price column. */
+@media(min-width:801px){
+  .services-page .service-category,
+  .services-page .service-category:nth-child(even){
+    max-width:1800px;
+    padding:clamp(68px,5vw,92px) clamp(80px,9vw,185px);
+    grid-template-columns:minmax(300px,.82fr) minmax(460px,1.18fr);
+    gap:clamp(55px,7vw,120px);
+    align-items:start;
+  }
+  .services-page .service-category:nth-child(odd){
+    grid-template-columns:minmax(460px,1.18fr) minmax(300px,.82fr);
+  }
+  .services-page .service-category figure{
+    position:sticky;
+    top:205px;
+    width:100%;
+    height:auto;
+    aspect-ratio:2480/3508;
+    min-height:0;
+    align-self:start;
+    background:#f6eef4;
+  }
+  .services-page .service-category figure img{
+    object-fit:contain;
+  }
+  .services-page .service-list{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+    padding-top:18px;
+  }
+  .services-page .service-row{
+    min-height:76px;
+    padding:11px 13px;
+    grid-template-columns:minmax(0,1fr) auto;
+    justify-content:center;
+    align-content:center;
+    justify-items:stretch;
+    border:1px solid #e4dbe1;
+    background:rgba(255,255,255,.42);
+    text-align:left;
+  }
+  .services-page .service-row:hover{
+    padding-left:13px;
+    border-color:#cda8c8;
+  }
+  .services-page .service-row p{margin-left:0;text-align:left}
+  .services-page .service-row strong{align-self:center;text-align:right}
+  .services-page .service-parent{
+    grid-column:1/-1;
+    padding:16px 0 0;
+    border-bottom:0;
+  }
+  .services-page .service-parent ul{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:10px;
+  }
+  .services-page .service-note{margin-top:18px}
+  .services-page .service-book{margin-top:22px}
+  .services-page .featured .service-list{grid-template-columns:1fr}
+  .services-page .featured .service-row{min-height:125px}
+}
+
+@media(max-width:800px){
+  .services-page .service-list{padding-top:10px}
+  .services-page .service-row{padding-block:15px}
+  .services-page .service-category figure{
+    height:auto;
+    min-height:0;
+    aspect-ratio:2480/3508;
+    background:#f6eef4;
+  }
+  .services-page .service-category figure img{object-fit:contain}
+}
+
+@media(min-width:540px) and (max-width:800px){
+  .services-page .service-list{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+  }
+  .services-page .service-row{
+    min-height:82px;
+    padding:12px;
+    border:1px solid #e4dbe1;
+  }
+  .services-page .service-parent{grid-column:1/-1}
+  .services-page .service-parent ul{
+    display:grid;
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:9px;
+  }
+}
+
+/* Contact appointment form */
+.appointment-section{
+  scroll-margin-top:90px;
+  padding:clamp(82px,10vw,145px) 24px;
+  background:#fffdfb;
+  color:#242124;
+}
+.appointment-heading{
+  max-width:760px;
+  margin:0 auto 48px;
+  text-align:center;
+}
+.appointment-heading>p{
+  margin:0 0 16px;
+  color:#a5329c;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+}
+.appointment-heading h2{
+  margin:0;
+  font:400 clamp(45px,6vw,76px)/.95 'Cormorant Garamond',serif;
+}
+.appointment-heading h2 em{color:#7a2d73;font-weight:400}
+.appointment-form{
+  width:min(100%,900px);
+  margin:0 auto;
+  padding:clamp(30px,5vw,58px);
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:25px 28px;
+  border:1px solid #eadfe8;
+  background:#fbf6fa;
+  box-shadow:0 28px 80px rgba(91,41,85,.07);
+}
+.appointment-field{display:flex;min-width:0;flex-direction:column;gap:9px}
+.appointment-field label{
+  color:#4d454c;
+  font-size:10px;
+  font-weight:600;
+  letter-spacing:.11em;
+  text-transform:uppercase;
+}
+.appointment-field input,
+.appointment-field select,
+.appointment-field textarea{
+  width:100%;
+  min-height:50px;
+  padding:13px 14px;
+  border:1px solid #ded2db;
+  border-radius:2px;
+  outline:0;
+  background:#fff;
+  color:#242124;
+  font:400 13px 'DM Sans',sans-serif;
+  transition:border-color .25s ease,box-shadow .25s ease,background .25s ease;
+}
+.appointment-field textarea{min-height:125px;resize:vertical;line-height:1.6}
+.appointment-field input::placeholder,.appointment-field textarea::placeholder{color:#999097}
+.appointment-field input:focus,
+.appointment-field select:focus,
+.appointment-field textarea:focus{
+  border-color:#a5329c;
+  background:#fffdfb;
+  box-shadow:0 0 0 3px rgba(165,50,156,.08);
+}
+.appointment-message{grid-column:1/-1}
+.appointment-message small{align-self:flex-end;color:#8d858b;font-size:10px}
+.appointment-submit{
+  grid-column:1/-1;
+  min-height:54px;
+  border:0;
+  border-radius:2px;
+  background:#7a2d73;
+  color:#fff;
+  font:600 10px 'DM Sans',sans-serif;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:background .25s ease,transform .25s ease,box-shadow .25s ease;
+}
+.appointment-submit span{display:inline-block;margin-left:8px;transition:transform .25s ease}
+.appointment-submit:hover{background:#a5329c;transform:translateY(-2px);box-shadow:0 12px 28px rgba(122,45,115,.2)}
+.appointment-submit:hover span{transform:translateX(4px)}
+.appointment-assurance{
+  grid-column:1/-1;
+  margin:0;
+  color:#777077;
+  font-size:11px;
+  line-height:1.6;
+  text-align:center;
+}
+@media(max-width:680px){
+  .appointment-section{padding:75px 18px}
+  .appointment-heading{margin-bottom:34px}
+  .appointment-form{grid-template-columns:1fr;padding:28px 20px;gap:20px}
+  .appointment-message,.appointment-submit,.appointment-assurance{grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  .appointment-field input,.appointment-field select,.appointment-field textarea,.appointment-submit,.appointment-submit span{transition:none}
+}
+
+/* Persistent WhatsApp contact */
+.floating-whatsapp{
+  position:fixed;
+  right:clamp(18px,2.4vw,38px);
+  bottom:clamp(18px,2.4vw,38px);
+  z-index:1000;
+  width:62px;
+  height:62px;
+  display:grid;
+  place-items:center;
+  border:1px solid rgba(255,255,255,.75);
+  border-radius:50%;
+  background:#25d366;
+  color:#fff;
+  box-shadow:0 12px 34px rgba(16,78,41,.3);
+  transition:transform .25s ease,background .25s ease,box-shadow .25s ease;
+}
+.floating-whatsapp::before{
+  content:'';
+  position:absolute;
+  inset:-7px;
+  z-index:-1;
+  border:1px solid rgba(37,211,102,.28);
+  border-radius:inherit;
+}
+.floating-whatsapp svg{width:31px;height:31px;fill:currentColor}
+.floating-whatsapp:hover{
+  color:#fff;
+  background:#1fbd5a;
+  transform:translateY(-4px) scale(1.04);
+  box-shadow:0 17px 40px rgba(16,78,41,.38);
+}
+.floating-whatsapp:focus-visible{outline:3px solid #fff;outline-offset:3px}
+@media(max-width:680px){
+  .floating-whatsapp{right:18px;bottom:18px;width:56px;height:56px}
+  .floating-whatsapp svg{width:28px;height:28px}
+}
+@media(prefers-reduced-motion:reduce){.floating-whatsapp{transition:none}}
