@@ -47,6 +47,7 @@
     link.href = 'https://wa.me/9779851211778';
   });
   const routeAppointmentLinks = () => {
+    const appointmentUrl = `https://wa.me/9779851211778?text=${encodeURIComponent('Hello Arden, I would like to make an appointment.')}`;
     document.querySelectorAll('a').forEach(link => {
       const label = link.textContent.trim();
       const href = link.getAttribute('href') || '';
@@ -54,7 +55,9 @@
         || /book (?:an? |your )?(?:appointment|consultation)|make an appointment/i.test(label)
         || (/appointment/i.test(href) && href.startsWith('mailto:'));
       if (!isAppointmentCta) return;
-      link.href = location.pathname.endsWith('contact.html') ? '#appointment' : 'contact.html#appointment';
+      link.href = appointmentUrl;
+      link.target = '_blank';
+      link.rel = 'noopener';
     });
   };
   routeAppointmentLinks();

@@ -35,7 +35,7 @@
   } catch (error) {
     console.error('Unable to load the shared navigation header.', error);
     if (!currentHeader && mount) {
-      mount.innerHTML = '<header class="site-header"><button class="menu" type="button" aria-label="Navigation requires a web server"><i></i><i></i><i></i></button><a class="brand" href="index.html#top" aria-label="Arden home"><img src="IMAGES/arden_logo_final-removebg-preview.png" alt="Arden"></a><a class="book-link" href="contact.html#appointment">Make an appointment</a></header>';
+      mount.innerHTML = '<header class="site-header"><button class="menu" type="button" aria-label="Navigation requires a web server"><i></i><i></i><i></i></button><a class="brand" href="index.html#top" aria-label="Arden home"><img src="IMAGES/arden_logo_final-removebg-preview.png" alt="Arden"></a><a class="book-link" href="https://wa.me/9779851211778?text=Hello%20Arden%2C%20I%20would%20like%20to%20make%20an%20appointment." target="_blank" rel="noopener">Make an appointment</a></header>';
     }
   }
 })();

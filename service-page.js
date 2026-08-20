@@ -129,7 +129,8 @@ if (contactPage) {
       <button class="appointment-submit" type="submit">Request Appointment <span aria-hidden="true">→</span></button>
       <p class="appointment-assurance">Our team will contact you to confirm your appointment.</p>
     </form>`;
-  contactPage.insertAdjacentElement('afterend', appointmentSection);
+  const contactMap = document.querySelector('.contact-map');
+  (contactMap || contactPage).insertAdjacentElement('afterend', appointmentSection);
   if (location.hash === '#appointment') {
     requestAnimationFrame(() => appointmentSection.scrollIntoView({
       behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
@@ -158,25 +159,16 @@ if (academyIntro && /Arden Academy/i.test(document.title)) {
   const academyCourses = document.createElement('section');
   academyCourses.className = 'academy-courses';
   academyCourses.id = 'academy-courses';
-  academyCourses.innerHTML = `
-    <div class="academy-courses__intro">
-      <h2>Learn<br>the art<br>behind<br>the look</h2>
-      <p>Build confidence in your own routine or develop the practical, professional skills to turn artistry into a career.</p>
-    </div>
-    <div class="academy-course-cards">
-      <a class="academy-course-card" href="contact.html#appointment">
-        <img src="IMAGES/self makeup.jpg" alt="Self-makeup education at Arden">
-        <div><small>Course</small><h3>Self-Makeup<br>Class</h3><p>For clients who want to build confidence with everyday and occasion makeup.</p><strong>Explore Course <span aria-hidden="true">↗</span></strong></div>
-      </a>
-      <a class="academy-course-card academy-course-card--raised" href="contact.html#appointment">
-        <img src="IMAGES/traditional.jpg" alt="Professional makeup education at Arden">
-        <div><small>Course</small><h3>Professional<br>Makeup Education</h3><p>For aspiring artists seeking structured, practical beauty training.</p><strong>Explore Course <span aria-hidden="true">↗</span></strong></div>
-      </a>
-      <a class="academy-course-card" href="contact.html#appointment">
-        <img src="IMAGES/makeup.jpg" alt="Focused makeup masterclass at Arden">
-        <div><small>Course</small><h3>Focused<br>Masterclasses</h3><p>Concentrated demonstrations and guided practice for refining selected techniques.</p><strong>Explore Masterclasses <span aria-hidden="true">↗</span></strong></div>
-      </a>
-    </div>`;
+  const courses = [
+    ['lash-lifting-course','1. Arden_page-0001.jpg','2 Day Course','Lash Lifting Course','Rs. 20,000'],
+    ['professional-hairstyling-course','1. Arden_page-0002.jpg','3 Day Course','Professional Hairstyling Course','Rs. 35,000'],
+    ['professional-makeup-course-5-days','1. Arden_page-0003.jpg','5 Day Course','Professional Makeup Course — 5 Days','Rs. 1,50,000'],
+    ['professional-makeup-course-7-days','1. Arden_page-0004.jpg','7 Day Course','Professional Makeup Course — 7 Days','Rs. 1,95,000'],
+    ['professional-bridal-makeup-course','1. Arden_page-0005.jpg','5 Day Course','Professional Bridal Makeup Course','Rs. 1,50,000'],
+    ['self-makeup-course','1. Arden_page-0006.jpg','3 Day Course','Self Makeup Course','Rs. 25,000'],
+    ['professional-blow-dry-class','1. Arden_page-0007.jpg','3 Day Course','Professional Blow Dry Class','Rs. 15,000']
+  ];
+  academyCourses.innerHTML = `<div class="academy-courses__intro"><p>Arden Academy</p><h2>Master Your <em>Craft</em></h2><span>Professional beauty, makeup and hairstyling courses designed to turn passion into expertise. Explore our hands-on training programs led by experienced professionals.</span></div><div class="academy-course-cards">${courses.map((course,index)=>`<a class="academy-course-card${index===0||index===4?' academy-course-card--featured':''}" href="/academy/${course[0]}/"><figure><img src="IMAGES/${course[1]}" alt="${course[3]} at Arden Academy Lalitpur" loading="lazy"></figure><div><small>${course[2]}</small><h3>${course[3]}</h3><p>${course[4]}</p><strong>Explore Course <span aria-hidden="true">→</span></strong></div></a>`).join('')}</div>`;
   academyIntro.insertAdjacentElement('afterend', academyCourses);
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) academyCourses.classList.add('is-visible');
   else {
