@@ -160,15 +160,15 @@ if (academyIntro && /Arden Academy/i.test(document.title)) {
   academyCourses.className = 'academy-courses';
   academyCourses.id = 'academy-courses';
   const courses = [
-    ['lash-lifting-course','1. Arden_page-0001.jpg','2 Day Course','Lash Lifting Course','Rs. 20,000'],
-    ['professional-hairstyling-course','1. Arden_page-0002.jpg','3 Day Course','Professional Hairstyling Course','Rs. 35,000'],
-    ['professional-makeup-course-5-days','1. Arden_page-0003.jpg','5 Day Course','Professional Makeup Course — 5 Days','Rs. 1,50,000'],
-    ['professional-makeup-course-7-days','1. Arden_page-0004.jpg','7 Day Course','Professional Makeup Course — 7 Days','Rs. 1,95,000'],
-    ['professional-bridal-makeup-course','1. Arden_page-0005.jpg','5 Day Course','Professional Bridal Makeup Course','Rs. 1,50,000'],
-    ['self-makeup-course','1. Arden_page-0006.jpg','3 Day Course','Self Makeup Course','Rs. 25,000'],
-    ['professional-blow-dry-class','1. Arden_page-0007.jpg','3 Day Course','Professional Blow Dry Class','Rs. 15,000']
+    ['lash-lifting-course','newarden lashlifting.png','2 Day Course','Lash Lifting Course'],
+    ['professional-hairstyling-course','new arden make up course.png','3 Day Course','Professional Hairstyling Course'],
+    ['professional-makeup-course-5-days','new arden 5 day make up (1).png','5 Day Course','Professional Makeup Course — 5 Days'],
+    ['professional-makeup-course-7-days','new arden 7 day make up.png','7 Day Course','Professional Makeup Course — 7 Days'],
+    ['professional-bridal-makeup-course','arden bridal (1).png','5 Day Course','Professional Bridal Makeup Course'],
+    ['self-makeup-course','new arden self makeup.png','3 Day Course','Self Makeup Course'],
+    ['professional-blow-dry-class','arden 3 day class.png','3 Day Course','Professional Blow Dry Class']
   ];
-  academyCourses.innerHTML = `<div class="academy-courses__intro"><p>Arden Academy</p><h2>Master Your <em>Craft</em></h2><span>Professional beauty, makeup and hairstyling courses designed to turn passion into expertise. Explore our hands-on training programs led by experienced professionals.</span></div><div class="academy-course-cards">${courses.map((course,index)=>`<a class="academy-course-card${index===0||index===4?' academy-course-card--featured':''}" href="/academy/${course[0]}/"><figure><img src="IMAGES/${course[1]}" alt="${course[3]} at Arden Academy Lalitpur" loading="lazy"></figure><div><small>${course[2]}</small><h3>${course[3]}</h3><p>${course[4]}</p><strong>Explore Course <span aria-hidden="true">→</span></strong></div></a>`).join('')}</div>`;
+  academyCourses.innerHTML = `<div class="academy-courses__intro"><p>Arden Academy</p><h2>Master Your <em>Craft</em></h2><span>Professional beauty, makeup and hairstyling courses designed to turn passion into expertise. Explore our hands-on training programs led by experienced professionals.</span></div><div class="academy-course-cards">${courses.map((course,index)=>`<a class="academy-course-card${index===0||index===4?' academy-course-card--featured':''}" href="/academy/${course[0]}/"><figure><img src="IMAGES/${course[1]}" alt="${course[3]} at Arden Academy Lalitpur" loading="lazy"></figure><div><small>${course[2]}</small><h3>${course[3]}</h3><strong>Explore Course <span aria-hidden="true">→</span></strong></div></a>`).join('')}</div>`;
   academyIntro.insertAdjacentElement('afterend', academyCourses);
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) academyCourses.classList.add('is-visible');
   else {

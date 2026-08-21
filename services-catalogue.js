@@ -10,7 +10,7 @@ C('threading','Threading & Facial Grooming','Threading & Facial Grooming','anna.
 C('body-grooming','Body Grooming Services','Body Grooming Services','vintage.jpg',[['Face Waxing','Rs. 500'],['Underarms','Rs. 500'],['Half Arms','Rs. 800'],['Full Arms','Rs. 1,500'],['Half Legs','Rs. 1,000'],['Full Legs','Rs. 2,000'],['Half Back','Rs. 800'],['Full Back','Rs. 1,600'],['Full Stomach','Rs. 1,000'],['Bikini Wax','Rs. 1,200'],['Brazilian Wax','Rs. 3,000'],['Full Body Waxing','Rs. 4,500'],['Full Body Waxing + Bikini Line','Rs. 5,700'],['Full Body Waxing + Brazilian','Rs. 8,500']]),
 C('arden-special','Arden Special','Arden Special','royal.jpg',[['Sweaty Scalp Treatment','Rs. 3,500','Anti-Hairfall / Anti-Flakiness / Sweat Control / Itchy & Dry Scalp Treatment / Lice Treatment / Fungal/Dandruff Treatment / Sensitive Scalp & Skin Treatment / Head Spa included'],['Brazilian Blow Out','Rs. 15,000'],['Arden Special Facial','Rs. 8,000','With Skin Test'],['Skin Treatment','Rs. 3,000'],['Hair Cut by Master Hair Stylist','Rs. 3,000','Wash, hair cut and blow dry.']]),
 C('party-event','Party & Event Glam','Party & Event Glam','bridal makeup image.jpg',[['Event Makeup','Rs. 3,500'],['Guest Makeup','Rs. 8,000'],['Party Makeup','Rs. 12,500','By Junior Makeup Artist'],['Full Glam Party Makeup','Rs. 15,000','By Senior Makeup Artist'],['VIP Party Makeup','Rs. 27,000']]),
-C('nail-studio','Nail Studio','Nail Studio','SaveClip.App_719491000_17915424168392530_8442853382264134304_n.jpg',[['Gel Nail Extensions — Plain','Rs. 2,500'],['Gel Polish (Hands)','Rs. 2,000'],['Gel Polish (Feet)','Rs. 1,500'],['Nail Refill','Rs. 2,500'],['Nail Art','Rs. 100 / nail art'],['Extension Removal','Rs. 1,000'],['Normal Nail Paint with Filing','Rs. 500']],{note:'Nail art pricing varies based on the design. Custom designs are charged at an additional Rs. 100 per nail art.'})];
+C('nail-studio','Nail Studio','Nail Studio','nails 1.jpg',[['Gel Nail Extensions — Plain','Rs. 2,500'],['Gel Polish (Hands)','Rs. 2,000'],['Gel Polish (Feet)','Rs. 1,500'],['Nail Refill','Rs. 2,500'],['Nail Art','Rs. 100 / nail art'],['Extension Removal','Rs. 1,000'],['Normal Nail Paint with Filing','Rs. 500']],{note:'Nail art pricing varies based on the design. Custom designs are charged at an additional Rs. 100 per nail art.'})];
 const serviceImages = {
   'facial-skin': 'anna4.jpg',
   'precision-haircuts': 'hair.jpg',
@@ -22,7 +22,7 @@ const serviceImages = {
   'body-grooming': 'traditional.jpg',
   'arden-special': 'royal.jpg',
   'party-event': 'bridal makeup image.jpg',
-  'nail-studio': 'SaveClip.App_719491000_17915424168392530_8442853382264134304_n.jpg'
+  'nail-studio': 'nails 1.jpg'
 };
 
 serviceCategories.forEach(category => { category.image = serviceImages[category.id]; });

@@ -1258,3 +1258,9 @@ body.detail-page .academy-course-card:hover strong span{transform:translateX(6px
 }
 
 .services-page .service-category figure img{object-fit:cover;object-position:center}
+/* Academy poster prices are part of the supplied artwork; crop the lower price strip from thumbnails. */
+body.detail-page .academy-course-card>figure img{transform:scale(1.16);transform-origin:center top}
+body.detail-page .academy-course-card:hover>figure img{transform:scale(1.2)}
+/* Academy course facts: three informational items after public pricing removal. */
+.academy-course-page .course-facts{grid-template-columns:repeat(3,1fr)}
+@media(max-width:680px){.academy-course-page .course-facts{grid-template-columns:1fr}.academy-course-page .course-facts>div{min-height:150px;border-right:0;border-bottom:1px solid #ded3db}.academy-course-page .course-facts>div:last-child{border-bottom:0}}
